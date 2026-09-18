@@ -1,0 +1,80 @@
+:root {
+  --navy: #182c42;
+  --ivory: #f8f6f0;
+  --pink: #e82c63;
+  --teal: #0fa8a3;
+  --yellow: #f5b21b;
+  --violet: #874bb5;
+  --blue: #39b9d0;
+  --section: #eef7f6;
+
+  --font-heading: "Outfit", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  --button-shadow: 2px 6px 12px rgba(0, 0, 0, 0.5);
+  --button-hover: 0 15px 20px rgba(24, 44, 66, 0.38);
+  --box-shadow:  4px 15px 25px rgba(0, 0, 0, 0.30);
+  --box-shadow-hover:  0 20px 40px rgba(24, 44, 66, 0.15);
+
+  color-scheme: light dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+html {
+  height: 100%;
+  width: 100vw;
+  background: var(--background);
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-display: var(--font-heading);
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--navy);
+  background: var(--ivory);
+  letter-spacing: 0.25em;
+  line-height: 1.75;
+}
+
+a {
+  color: var(--ivory);
+  text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--navy);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--pink);
+  border-radius: 50px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--teal);
+}

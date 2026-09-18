@@ -1,0 +1,142 @@
+.app {
+  will-change: contents;
+  .fade-in-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition:
+      opacity 0.8s ease-in-out,
+      transform 0.8s ease-in-out;
+    will-change: opacity, transform;
+
+    &.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .home-page,
+  .about-page,
+  .events-page,
+  .groups-page,
+  .contact-page {
+    animation: fadeIn 0.3s forwards;
+    h1 {
+      font-family: var(--font-heading);
+      font-weight: 500;
+      font-style: normal;
+      margin: 0;
+      font-size: 58px;
+      text-transform: uppercase;
+      line-height: 1.2;
+    }
+    h2 {
+      font-size: 38px;
+      font-family: var(--font-heading);
+    }
+    h3 {
+      font-family: var(--font-heading);
+      font-size: 22px;
+    }
+    p {
+      font-family: var(--font-body);
+      font-weight: 700;
+    }
+    
+    .header {
+      width: min(1200px, 90%);
+      margin-bottom: 2rem;
+
+      h2 {
+        line-height: 0.95;
+      }
+    }
+    span.eyebrow {
+      margin-bottom: 16px;
+      font-family: var(--font-body);
+      font-size: 18px;
+      font-weight: 900;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--pink);
+      animation: fadeIn 0.3s 0.5s backwards;
+    }
+    .header > p {
+      max-width: 650px;
+    }
+  }
+}
+.error-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12rem 0;
+  font-size: 2rem;
+}
+
+.back-to-top {
+  font-family: var(--font-body);
+  font-weight: 600;
+  position: fixed;
+  bottom: 6rem;
+  left: 1.2rem;
+  padding: 10px;
+  background: var(--pink);
+  color: var(--ivory);
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  border: solid 2px var(--ivory);
+  border-radius: 50px;
+  text-align: center;
+  width: fit-content;
+  padding: 0.75rem 1.25rem;
+  box-shadow: var(--button-shadow);
+  z-index: 999;
+  cursor: pointer;
+  animation: fadeInUp 2s;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: var(--button-hover);
+    border: solid 2px var(--pink);
+    transform: translateY(-2px);
+  }
+}
+@media screen and (max-width: 768px) {
+  .app {
+    .home-page,
+    .about-page,
+    .events-page,
+    .groups-page,
+    .contact-page {
+      h1 {
+        font-size: 38px;
+      }
+
+      h2 {
+        font-size: 28px;
+      }
+
+      h3 {
+        font-size: 18px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+
+      .eyebrow {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .error-message {
+    padding: 8rem 0;
+    font-size: 1.5rem;
+  }
+
+  .back-to-top {
+    bottom: 10rem;
+    font-size: 13px;
+    padding: 0.75rem 1rem;
+  }
+}

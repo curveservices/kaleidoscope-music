@@ -1,0 +1,266 @@
+header {
+  animation: fadeIn 0.3s 0.3s backwards;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  padding: 10px 0;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  font-family: var(--font-body);
+  font-optical-sizing: auto;
+  background: var(--ivory);
+  transition: all 2s ease;
+  cursor: pointer;
+
+  .logo {
+    width: auto;
+    height: 50px;
+  }
+
+  .mobile-logo {
+    display: none;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+    font-weight: 600;
+    gap: 3rem;
+    color: var(--navy);
+
+    .active .menu-container {
+      border-bottom: 2px solid var(--pink);
+      padding-left: 0.25rem;
+    }
+
+    .text {
+      color: var(--navy);
+
+      &:hover {
+        color: var(--pink);
+        transition: all 0.3s ease-in-out;
+      }
+    }
+  }
+}
+
+.navbar-scroll {
+  opacity: 1;
+  visibility: visible;
+  transition:
+    opacity 0.1s ease-in-out,
+    visibility 0.1s ease-in-out;
+}
+
+.navbar-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.mobile-icon {
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  header {
+    justify-content: space-between;
+    padding: 2rem 4rem;
+    button {
+      display: none;
+    }
+
+    .logo {
+      display: none;
+    }
+
+    .mobile-logo {
+      display: block;
+
+      width: 100px;
+      height: auto;
+
+      object-fit: contain;
+      padding-top: 5px;
+    }
+
+    nav {
+      display: none;
+      position: fixed;
+      top: 70px;
+      right: 0;
+      width: 100%;
+      height: 100vh;
+      z-index: 999;
+      overflow: hidden;
+
+      // =====================================
+      // OPEN MENU
+      // =====================================
+
+      &.mobile-show {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        background: var(--ivory);
+        align-items: flex-start;
+
+        gap: 3rem;
+
+        padding: 8rem 6rem;
+
+        // ===================================
+        // MENU CONTENT
+        // ===================================
+
+        > * {
+          position: relative;
+
+          z-index: 2;
+        }
+
+        .active {
+          border-bottom: none;
+
+          .text {
+            color: var(--pink);
+          }
+        }
+
+        .mobile-icon {
+          display: block;
+
+          font-size: 25px;
+
+          color: var(--pink);
+        }
+
+        .text {
+          font-size: 18px;
+          text-transform: uppercase;
+          color: var(--navy);
+          transition: color 0.3s ease;
+        }
+
+        .menu-container {
+          display: flex;
+          align-items: center;
+          gap: 28px;
+          padding-bottom: 10px;
+          border-bottom: none;
+
+          transition: transform 0.3s ease;
+
+          &:hover {
+            transform: translateX(5px);
+
+            .text {
+              color: var(--navy);
+            }
+          }
+        }
+
+        // ===================================
+        // CONTACT
+        // ===================================
+
+        .contact-container {
+          display: flex;
+
+          flex-direction: column;
+
+          gap: 20px;
+
+          padding-top: 2rem;
+
+          border-top: 1px solid rgba(200, 169, 106, 0.25);
+
+          font-family: var(--font-body);
+
+          .text {
+            font-size: 16px;
+          }
+
+          .small {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    padding: 1rem;
+
+    .desktop-btn {
+      display: none;
+    }
+
+    &.menu-open {
+      animation: none;
+    }
+
+    nav.mobile-show {
+      top: 65px;
+      height: calc(100vh - 65px);
+      gap: 2rem;
+      padding: 5rem 6rem;
+
+      &::before {
+        width: 900px;
+        height: 900px;
+
+        opacity: 0.15;
+      }
+
+      &::after {
+        inset: 25px;
+      }
+
+      .menu-container {
+        gap: 28px;
+
+        padding-bottom: 0;
+      }
+
+      .mobile-icon {
+        width: 28px;
+
+        font-size: 28px;
+      }
+
+      .text {
+        font-size: 19px;
+
+        letter-spacing: 0.1em;
+      }
+
+      .contact-container {
+        gap: 18px;
+
+        padding-top: 25px;
+
+        .text {
+          font-size: 16px;
+          width: 100%;
+        }
+
+        .small {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  .menu-icon {
+    width: 50px;
+    height: 50px;
+
+    font-size: 22px;
+  }
+}
