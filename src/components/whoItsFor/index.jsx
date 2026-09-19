@@ -52,7 +52,7 @@ const TargetCustomer = ({ eyebrow, heading, headingAccent, p }) => {
               <FontAwesomeIcon
                 className="target-section__icon"
                 icon={target.icon}
-                style={{color: target.color}}
+                style={{ color: target.color }}
               />
               <h3>{target.title}</h3>
               <p>{target.p}</p>
@@ -64,7 +64,11 @@ const TargetCustomer = ({ eyebrow, heading, headingAccent, p }) => {
             </article>
           ))}
         </div>
-        <Button text="Find out where you fit" link="" />
+        <Button
+          text="Find out where you fit"
+          link=""
+          background="var(--pink)"
+        />
       </div>
     </section>
   );

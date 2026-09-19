@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./index.scss";
+import { Link } from "react-router-dom";
 
 const GroupCard = ({ title, description, icon, colour, image, href }) => {
   return (
@@ -17,10 +18,10 @@ const GroupCard = ({ title, description, icon, colour, image, href }) => {
 
         <p>{description}</p>
 
-        <a href={href} className="group-card__link">
+        <Link to={href} className="group-card__link link">
           Discover the group
           <span aria-hidden="true">→</span>
-        </a>
+        </Link>
       </div>
     </article>
   );

@@ -18,11 +18,10 @@ const IntroSection = ({
           <h2>
             {h2} <span>{headingAccent}</span>
           </h2>
-        </div>
-        <div className="intro-section__content">
           <p className="intro-section__lead">{p1}</p>
           <p>{p2}</p>
         </div>
+        <div className="intro-section__content"></div>
       </div>
       <div className="intro-section__features">
         {features.map((feature) => (

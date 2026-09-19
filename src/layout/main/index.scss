@@ -40,16 +40,20 @@
       font-family: var(--font-body);
       font-weight: 700;
     }
-    
+
     .header {
       width: min(1200px, 90%);
       margin-bottom: 2rem;
 
       h2 {
+        display: block;
         line-height: 0.95;
       }
+      p {
+        max-width: 550px;
+      }
     }
-    span.eyebrow {
+    .eyebrow {
       margin-bottom: 16px;
       font-family: var(--font-body);
       font-size: 18px;
@@ -59,8 +63,32 @@
       color: var(--pink);
       animation: fadeIn 0.3s 0.5s backwards;
     }
-    .header > p {
-      max-width: 650px;
+  }
+  .link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+
+    color: var(--navy);
+
+    text-decoration: none;
+
+    span {
+      display: inline-block;
+      font-size: 1.1rem;
+      color: var(--pink);
+      transition: all 0.3s ease;
+    }
+
+    &:hover span {
+      transform: translateX(5px);
     }
   }
 }

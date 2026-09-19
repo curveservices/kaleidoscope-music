@@ -11,28 +11,21 @@
   font-size: 0.9rem;
   font-weight: 600;
   box-shadow: var(--button-shadow);
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease;
   cursor: pointer;
   span {
-    transition: transform 0.25s ease-in-out;
-  }
-
-  &:hover span {
-    transform: translateX(5px);
+    display: inline-block;
+    margin-left: 0.35rem;
+    transition: all 0.3s ease;
   }
   &:hover {
     box-shadow: var(--button-hover);
-    border: solid 2px var(--pink);
+    border: 2px solid var(--pink);
     transform: translateY(-2px);
+    span {
+      transform: translateX(5px);
+    }
   }
-
-  .flat-btn + .flat-btn {
-    margin-top: 1rem;
-  }
-}
-
-a {
-  text-decoration: none;
 }
 
 @media screen and (max-width: 1024px) {

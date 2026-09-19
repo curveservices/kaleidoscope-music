@@ -9,6 +9,7 @@ import { faArrowUpRightDots } from "@fortawesome/free-solid-svg-icons";
 import "./index.scss";
 import GroupsGrid from "../../components/groupsGrids";
 import TargetCustomer from "../../components/whoItsFor/index.jsx";
+import EventsPreview from "../../components/eventsPreview/index.jsx";
 
 const Home = () => {
   const FadeInSection = ({ children }) => {
@@ -83,6 +84,9 @@ const Home = () => {
             We welcome beginners, returning musicians and experienced players alike, with different groups offering
             amerent leveis or challende"
         />
+      </FadeInSection>
+      <FadeInSection>
+        <EventsPreview />
       </FadeInSection>
     </div>
   );

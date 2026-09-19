@@ -17,17 +17,10 @@
   }
 
   .header {
-    line-height: 0.95;
     span {
       display: block;
       color: var(--teal);
     }
-  }
-
-  &__content {
-    display: flex;
-    flex-direction: column;
-    max-width: 550px;
   }
 
   // -------------------------

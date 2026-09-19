@@ -1,0 +1,14 @@
+.events-preview {
+  padding: 100px 64px 64px;
+  .header {
+    h2 {
+      span {
+        color: var(--teal);
+      }
+    }
+  }
+  &__card-container {
+    display: flex;
+    gap: 2rem;
+  }
+}
