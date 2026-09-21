@@ -4,25 +4,20 @@
   background: var(--section);
 
   &__header {
-    width: min(1200px, 90%);
-    margin-bottom: 2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+    margin-bottom: 4rem;
     z-index: 1;
   }
 
   h2 {
     span {
-      display: block;
       color: var(--violet);
     }
   }
   &__image {
     position: absolute;
     inset: 0;
-    z-index: -0;
     overflow: hidden;
+    z-index: 0;
 
     img {
       position: absolute;

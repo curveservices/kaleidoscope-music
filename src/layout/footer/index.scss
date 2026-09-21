@@ -1,264 +1,267 @@
 .footer {
+  position: relative;
+  background: var(--navy);
+  color: var(--ivory);
+  overflow: hidden;
+
+  // ==========================================
+  // MAIN CONTENT
+  // ==========================================
+
+  &__inner {
     position: relative;
-    background: var(--navy);
-    color: var(--ivory);
-    overflow: hidden;
-
-    // ==========================================
-    // MAIN CONTENT
-    // ==========================================
-
-    &__inner {
-        position: relative;
-        z-index: 2;
-        display: grid;
-        grid-template-columns: 2fr 1fr 1.2fr 1fr;
-        gap: 60px;
-        width: min(1200px, calc(100% - 80px));
-        margin: 0 auto;
-        padding: 60px 0 60px;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.2fr 1fr;
+    gap: 60px;
+    width: min(1200px, calc(100% - 80px));
+    margin: 0 auto;
+    padding: 60px 0 60px;
+  }
+  &__logo {
+    max-width: 330px;
+    img {
+      width: 200px;
+      height: auto;
+      object-fit: cover;
     }
-    &__logo {
-        max-width: 330px;
-        img {
-            width: 200px;
-            height: auto;
-            object-fit: cover;
-        }
+  }
+  &__logo > p {
+    max-width: 280px;
+    margin: 0;
+    font-size: 12px;
+    margin-left: 0.5rem;
+    color: var(--yellow);
+  }
+  // ==========================================
+  // COLUMNS
+  // ==========================================
+
+  &__column {
+    h3 {
+      margin: 0 0 25px;
+      font-family: var(--font-heading);
+      font-size: clamp(1rem, 5vw, 1.2rem);
+      font-weight: 700;
+      line-height: 0.95;
+      letter-spacing: -0.03em;
+      text-transform: uppercase;
+      color: var(--yellow);
     }
-    &__logo > p {
-        max-width: 280px;
-        margin: 0;
-        font-size: 12px;
-        margin-left: 0.5rem;
+  }
+
+  // ==========================================
+  // NAVIGATION
+  // ==========================================
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    a {
+      width: fit-content;
+      font-size: 14px;
+      
+      text-decoration: none;
+      color: var(--ivory);
+      transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+
+      &:hover {
         color: var(--yellow);
+
+        transform: translateX(4px);
+      }
     }
-        // ==========================================
-        // COLUMNS
-        // ==========================================
-    
-        &__column {
-            h3 {
-                margin: 0 0 25px;
-                font-size: 14px;
-                font-weight: 700;
-                letter-spacing: 0.35em;
-                text-transform: uppercase;
-                color: var(--yellow);
-            }
-        }
-    
-        // ==========================================
-        // NAVIGATION
-        // ==========================================
-    
-        &__nav {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-    
-            a {
-                width: fit-content;
-                font-size: 14px;
-                text-decoration: none;
-                color: var(--ivory);
-                transition:
-                    color 0.25s ease,
-                    transform 0.25s ease;
-    
-                &:hover {
-                    color: var(--yellow);
-    
-                    transform: translateX(4px);
-                }
-            }
-        }
-    
-        // ==========================================
-        // CONTACT
-        // ==========================================
-    
-        &__contact {
-            display: flex;
-    
-            flex-direction: column;
-    
-            gap: 10px;
-    
-            p,
-            a {
-                margin: 0;
-    
-                font-size: 14px;
-    
-                line-height: 1.6;
-    
-                text-decoration: none;
-            }
-    
-            a {
-                transition: color 0.25s ease;
-    
-                &:hover {
-                    color: var(--yellow);
-                }
-            }
-        }
-    
-        // ==========================================
-        // SOCIALS
-        // ==========================================
-    
-        &__socials {
-            display: flex;
-    
-            gap: 12px;
-    
-            margin-bottom: 20px;
-        }
-    
-        &__socials a {
-            display: flex;
-    
-            align-items: center;
-            justify-content: center;
-    
-            width: 42px;
-            height: 42px;
-    
-            border: 1px solid var(--yellow);
-    
-            color: var(--yellow);
-    
-            text-decoration: none;
-    
-            transition:
-                background 0.3s ease,
-                color 0.3s ease,
-                transform 0.3s ease;
-    
-            &:hover {
-                background: var(--yellow);
-    
-                color: var(--navy);
-    
-                transform: translateY(-4px);
-            }
-        }
-    
-        &__social-text {
-            max-width: 180px;
-    
-            margin: 0;
-    
-            font-size: 12px;
-    
-            line-height: 1.7;
-        }
-    
-        // ==========================================
-        // BOTTOM BAR
-        // ==========================================
-    
-        &__bottom {
-            position: relative;
-    
-            z-index: 2;
-    
-            border-top: 1px solid rgba(200, 169, 106, 0.3);
-        }
-    
-        &__bottom-inner {
-            display: flex;
-    
-            align-items: center;
-            justify-content: space-between;
-    
-            width: min(1200px, calc(100% - 80px));
-    
-            margin: 0 auto;
-    
-            padding: 22px 0;
-        }
-    
-        &__bottom p,
-        &__legal {
-            margin: 0;
-    
-            font-size: 12px;
-    
-            letter-spacing: 0.25em;
-        }
-    
-        // ==========================================
-        // LEGAL
-        // ==========================================
-    
-        &__legal {
-            display: flex;
-    
-            align-items: center;
-    
-            gap: 12px;
-    
-            a {
-                text-decoration: none;
-    
-                color: inherit;
-    
-                transition: color 0.25s ease;
-    
-                &:hover {
-                    color: var(--yellow);
-                }
-            }
-    
-            span {
-                font-size: 5px;
-    
-                color: var(--yellow);
-            }
-        }
-        }
-    
-        // ==========================================
-        // TABLET
-        // ==========================================
-    
-        @media (max-width: 1024px) {
-            .footer {
-                &__inner {
-                    grid-template-columns: 1fr 1fr;
-    
-                    gap: 55px 40px;
-    
-                    width: calc(100% - 60px);
-                }
-    
-                &__bottom-inner {
-                    width: calc(100% - 60px);
-                }
-            }
-        }
-    
-        // ==========================================
-        // MOBILE
-        // ==========================================
-    
-        @media (max-width: 768px) {
-            .footer {
-                &__inner {
-                    grid-template-columns: 1fr;
-    
-                    gap: 45px;
-    
-                    width: calc(100% - 50px);
-    
-                    padding: 50px 0 60px;
-                }
-    
-                &__logo h2 {
-                    font-size: 2rem;
-                }
-            }
+  }
+
+  // ==========================================
+  // CONTACT
+  // ==========================================
+
+  &__contact {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    p,
+    a {
+      margin: 0;
+
+      font-size: 14px;
+
+      line-height: 1.6;
+
+      text-decoration: none;
+    }
+
+    a {
+      transition: color 0.25s ease;
+
+      &:hover {
+        color: var(--yellow);
+      }
+    }
+  }
+
+  // ==========================================
+  // SOCIALS
+  // ==========================================
+
+  &__socials {
+    display: flex;
+
+    gap: 12px;
+
+    margin-bottom: 20px;
+  }
+
+  &__socials a {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    border: 1px solid var(--yellow);
+
+    color: var(--yellow);
+
+    text-decoration: none;
+
+    transition:
+      background 0.3s ease,
+      color 0.3s ease,
+      transform 0.3s ease;
+
+    &:hover {
+      background: var(--yellow);
+
+      color: var(--navy);
+
+      transform: translateY(-4px);
+    }
+  }
+
+  &__social-text {
+    max-width: 180px;
+
+    margin: 0;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+  }
+
+  // ==========================================
+  // BOTTOM BAR
+  // ==========================================
+
+  &__bottom {
+    position: relative;
+
+    z-index: 2;
+
+    border-top: 1px solid rgba(200, 169, 106, 0.3);
+  }
+
+  &__bottom-inner {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    width: min(1200px, calc(100% - 80px));
+
+    margin: 0 auto;
+
+    padding: 22px 0;
+  }
+
+  &__bottom p,
+  &__legal {
+    margin: 0;
+
+    font-size: 12px;
+
+    letter-spacing: 0.25em;
+  }
+
+  // ==========================================
+  // LEGAL
+  // ==========================================
+
+  &__legal {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    a {
+      text-decoration: none;
+
+      color: inherit;
+
+      transition: color 0.25s ease;
+
+      &:hover {
+        color: var(--yellow);
+      }
+    }
+
+    span {
+      font-size: 5px;
+
+      color: var(--yellow);
+    }
+  }
+}
+
+// ==========================================
+// TABLET
+// ==========================================
+
+@media (max-width: 1024px) {
+  .footer {
+    &__inner {
+      grid-template-columns: 1fr 1fr;
+
+      gap: 55px 40px;
+
+      width: calc(100% - 60px);
+    }
+
+    &__bottom-inner {
+      width: calc(100% - 60px);
+    }
+  }
+}
+
+// ==========================================
+// MOBILE
+// ==========================================
+
+@media (max-width: 768px) {
+  .footer {
+    &__inner {
+      grid-template-columns: 1fr;
+
+      gap: 45px;
+
+      width: calc(100% - 50px);
+
+      padding: 50px 0 60px;
+    }
+
+    &__logo h2 {
+      font-size: 2rem;
+    }
+  }
 }

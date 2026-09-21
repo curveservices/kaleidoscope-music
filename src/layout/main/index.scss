@@ -20,21 +20,26 @@
   .contact-page {
     animation: fadeIn 0.3s forwards;
     h1 {
-      font-family: var(--font-heading);
-      font-weight: 500;
-      font-style: normal;
       margin: 0;
-      font-size: 58px;
-      text-transform: uppercase;
-      line-height: 1.2;
+      font-family: var(--font-heading);
+      font-size: clamp(2.75rem, 5vw, 5rem);
+      font-weight: 700;
+      line-height: 0.85;
+      letter-spacing: -0.03em;
     }
     h2 {
-      font-size: 38px;
+      font-size: clamp(1.75rem, 5vw, 3rem);
       font-family: var(--font-heading);
+      font-weight: 700;
+      line-height: 0.85;
+      letter-spacing: -0.04em;
     }
     h3 {
       font-family: var(--font-heading);
-      font-size: 22px;
+      font-size: clamp(1.25rem, 5vw, 1.75rem);
+      font-weight: 700;
+      line-height: 0.95;
+      letter-spacing: -0.03em;
     }
     p {
       font-family: var(--font-body);
@@ -43,21 +48,25 @@
 
     .header {
       margin-bottom: 2rem;
+      line-height: 1.4;
+      letter-spacing: 0.04em;
 
       h2 {
-        display: block;
-        line-height: 0.95;
+        text-transform: capitalize;
+        span {
+          display: block;
+        }
       }
       p {
         max-width: 550px;
       }
     }
     .eyebrow {
-      margin-bottom: 16px;
+      margin-bottom: 0.55rem;
       font-family: var(--font-body);
-      font-size: 18px;
+      font-size: clamp(1.25rem, 5vw, 1.25rem);
       font-weight: 900;
-      letter-spacing: 0.25em;
+      letter-spacing: 0.11em;
       text-transform: uppercase;
       color: var(--pink);
       animation: fadeIn 0.3s 0.5s backwards;
@@ -73,7 +82,7 @@
     font-weight: 700;
 
     text-transform: uppercase;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.04em;
 
     color: var(--navy);
 

@@ -1,4 +1,8 @@
-import { faClock, faLocationDot, faMapLocation } from "@fortawesome/free-solid-svg-icons";
+import {
+  faClock,
+  faLocationDot,
+  faMapLocation,
+} from "@fortawesome/free-solid-svg-icons";
 import e1 from "./assets/images/event1.jpg";
 import e2 from "./assets/images/event2.jpg";
 import e3 from "./assets/images/event3.jpg";

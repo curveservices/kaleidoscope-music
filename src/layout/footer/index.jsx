@@ -9,9 +9,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer__inner">
         <div className="footer__logo">
-          <img
-            src={logo}
-            alt="Kaleidoscope music groups, Rochester Kent" />
+          <img src={logo} alt="Kaleidoscope music groups, Rochester Kent" />
           <p>Make Music, Find Your People</p>
         </div>
         <div className="footer__column">

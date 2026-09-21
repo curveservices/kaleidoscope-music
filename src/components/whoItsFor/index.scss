@@ -34,7 +34,7 @@
   &__header {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 4rem;
   }
   .header {
     span {
@@ -66,15 +66,13 @@
     h3 {
       position: relative;
       z-index: 2;
-      margin: 0.75rem 0 0.5rem;
-      font-size: 1.15rem;
-      line-height: 1.15;
+      margin: 1rem 0;
     }
     p {
       position: relative;
       z-index: 2;
       margin: 0;
-      font-size: 0.85rem;
+      letter-spacing: -0.02em;
       line-height: 1.5;
     }
     &:hover {

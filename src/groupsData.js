@@ -1,9 +1,14 @@
-import { faGuitar, faGopuram, faDrumSteelpan, faWandSparkles } from "@fortawesome/free-solid-svg-icons";
+import {
+  faGuitar,
+  faGopuram,
+  faDrumSteelpan,
+  faWandSparkles,
+} from "@fortawesome/free-solid-svg-icons";
 import { faItunesNote, faShoelace } from "@fortawesome/free-brands-svg-icons";
-import steel from "./assets/images/steel.png"
+import steel from "./assets/images/steel.png";
 import sax from "./assets/images/sax.png";
 import home from "./assets/images/home.jpg";
-import strings from "./assets/images/event3.jpg"
+import strings from "./assets/images/event3.jpg";
 
 export const groups = [
   {

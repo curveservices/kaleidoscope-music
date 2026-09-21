@@ -10,7 +10,7 @@ const EventsPreview = () => {
       <div className="header">
         <span className="eyebrow">Upcoming events</span>
         <h2>
-          Hear us <span>play</span>
+          Hear us <span>Play Togther</span>
         </h2>
         <p>
           There are always new opportunities to see us perform. Come along and
