@@ -1,55 +1,59 @@
-import { faMusic, faGuitar, faWind } from "@fortawesome/free-solid-svg-icons";
+import { faGuitar, faGopuram, faDrumSteelpan, faWandSparkles } from "@fortawesome/free-solid-svg-icons";
+import { faItunesNote, faShoelace } from "@fortawesome/free-brands-svg-icons";
+import steel from "./assets/images/steel.png"
+import sax from "./assets/images/sax.png";
 import home from "./assets/images/home.jpg";
+import strings from "./assets/images/event3.jpg"
 
 export const groups = [
   {
-    id: "full-orchestra",
-    title: "Full Orchestra",
+    id: "kirby-orchestra",
+    title: "Kirby Orchestra",
     description:
       "Bring your instrument and make music as part of our full community orchestra.",
-    icon: faMusic,
+    icon: faGopuram,
     colour: "var(--violet)",
     image: home,
-    href: "/groups/full-orchestra",
+    href: "/groups/kirby-orchestra",
   },
   {
     id: "string-orchestra",
     title: "String Orchestra",
     description:
       "Play alongside other string musicians and develop your ensemble playing.",
-    icon: faMusic,
+    icon: faShoelace,
     colour: "var(--pink)",
-    image: "/images/groups/strings.jpg",
+    image: strings,
     href: "/groups/string-orchestra",
   },
   {
-    id: "flute-choir",
-    title: "Flute Choir",
+    id: "steel-band",
+    title: "Steel Band",
     description:
       "Explore the sound of multiple flutes playing together in harmony.",
-    icon: faWind,
+    icon: faDrumSteelpan,
     colour: "var(--teal)",
-    image: "/images/groups/flutes.jpg",
+    image: steel,
     href: "/groups/flute-choir",
   },
   {
-    id: "clarinet-choir",
-    title: "Clarinet Choir",
+    id: "clarinet-ensemble",
+    title: "Clarinet Ensemble",
     description:
       "Enjoy ensemble playing with fellow clarinettists in a friendly setting.",
-    icon: faWind,
+    icon: faWandSparkles,
     colour: "var(--yellow)",
     image: "/images/groups/clarinets.jpg",
-    href: "/groups/clarinet-choir",
+    href: "/groups/clarinet-ensemble",
   },
   {
-    id: "saxophone-choir",
-    title: "Saxophone Choir",
+    id: "saxophone-ensemble",
+    title: "Saxophone Ensemble",
     description: "Make a big sound together with our saxophone ensemble.",
-    icon: faMusic,
+    icon: faWandSparkles,
     colour: "var(--blue)",
-    image: "/images/groups/saxophones.jpg",
-    href: "/groups/saxophone-choir",
+    image: sax,
+    href: "/groups/saxophone-ensemble",
   },
   {
     id: "guitar",
@@ -76,7 +80,7 @@ export const groups = [
     title: "Mixed Ensembles",
     description:
       "Explore smaller combinations of instruments and discover something new.",
-    icon: faMusic,
+    icon: faItunesNote,
     colour: "var(--pink)",
     image: "/images/groups/mixed.jpg",
     href: "/groups/mixed-ensembles",

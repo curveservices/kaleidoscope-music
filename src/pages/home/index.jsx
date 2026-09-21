@@ -10,6 +10,7 @@ import "./index.scss";
 import GroupsGrid from "../../components/groupsGrids";
 import TargetCustomer from "../../components/whoItsFor/index.jsx";
 import EventsPreview from "../../components/eventsPreview/index.jsx";
+import CTA from "../../components/cta/index.jsx";
 
 const Home = () => {
   const FadeInSection = ({ children }) => {
@@ -81,12 +82,15 @@ const Home = () => {
           heading="Not played for a while?"
           headingAccent="That's OK."
           p="You don't have to be an expert to join Kaleidoscope.
-            We welcome beginners, returning musicians and experienced players alike, with different groups offering
-            amerent leveis or challende"
+            We welcome beginners, returning musicians and experienced players alike, with a range of groups offering
+            different levels of challenges"
         />
       </FadeInSection>
       <FadeInSection>
         <EventsPreview />
+      </FadeInSection>
+      <FadeInSection>
+        <CTA />
       </FadeInSection>
     </div>
   );
