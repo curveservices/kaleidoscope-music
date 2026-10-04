@@ -36,7 +36,7 @@ const Hero = ({
 
       <div className="hero__content">
         <div className="hero__inner">
-          <div className="heading">
+          <div className="header">
             <span className="eyebrow">{eyebrow}</span>
             <h1>{h1}</h1>
             <div className="h1-color">

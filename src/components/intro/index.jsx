@@ -1,5 +1,5 @@
 import "./index.scss";
-import FeatureCard from "../benefits";
+import FeatureCard from "../featureCards";
 import scope from "../../assets/images/small-kaleidoscope.png";
 
 const IntroSection = ({

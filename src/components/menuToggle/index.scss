@@ -2,7 +2,7 @@
   display: none;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1032px) {
   nav.mobile-show {
     .menu-container {
       opacity: 0;
@@ -51,9 +51,9 @@
 
     padding: 0;
 
-    border: 1px solid var(--pink);
+    border: 2px solid var(--pink);
     color: var(--pink);
-    background: var(--ivory);
+    background: var(--navy);
 
     font-size: 18px;
 
@@ -76,9 +76,9 @@
     }
 
     &:hover {
-      border-color: var(--gold-light);
+      border-color: var(--teal);
 
-      color: var(--gold-light);
+      color: var(--teal);
 
       transform: translateY(-2px);
 
@@ -90,14 +90,14 @@
     // ========================================
 
     &.is-open {
-      border-color: var(--coral);
+      border-color: var(--pink);
 
       background: rgba(200, 169, 106, 0.08);
 
-      color: var(--gold-light);
+      color: var(--teal);
 
       svg {
-        transform: rotate(90deg);
+        transform: rotateY(90deg);
       }
     }
   }

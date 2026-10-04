@@ -1,14 +1,15 @@
 import {
   faGuitar,
   faGopuram,
-  faDrumSteelpan,
   faWandSparkles,
 } from "@fortawesome/free-solid-svg-icons";
 import { faItunesNote, faShoelace } from "@fortawesome/free-brands-svg-icons";
-import steel from "./assets/images/steel.png";
+import mosaic from "./assets/images/event5.jpg";
 import sax from "./assets/images/sax.png";
 import home from "./assets/images/home.jpg";
 import strings from "./assets/images/event3.jpg";
+import flutes from "./assets/images/flutes.jpg";
+import clarinet from "./assets/images/clarinet.jpg";
 
 export const groups = [
   {
@@ -32,23 +33,23 @@ export const groups = [
     href: "/groups/string-orchestra",
   },
   {
-    id: "steel-band",
-    title: "Steel Band",
+    id: "flute-choir",
+    title: "Flute Choir",
     description:
       "Explore the sound of multiple flutes playing together in harmony.",
-    icon: faDrumSteelpan,
+    icon: faItunesNote,
     colour: "var(--teal)",
-    image: steel,
+    image: flutes,
     href: "/groups/flute-choir",
   },
   {
-    id: "clarinet-ensemble",
-    title: "Clarinet Ensemble",
+    id: "clarinet-choir",
+    title: "Clarinet Choir",
     description:
       "Enjoy ensemble playing with fellow clarinettists in a friendly setting.",
     icon: faWandSparkles,
     colour: "var(--yellow)",
-    image: "/images/groups/clarinets.jpg",
+    image: clarinet,
     href: "/groups/clarinet-ensemble",
   },
   {
@@ -61,33 +62,13 @@ export const groups = [
     href: "/groups/saxophone-ensemble",
   },
   {
-    id: "guitar",
-    title: "Guitar Groups",
+    id: "mosaic-sounds",
+    title: "Mosaic Sounds",
     description:
       "Play, learn and develop your guitar skills alongside other musicians.",
     icon: faGuitar,
     colour: "var(--violet)",
-    image: "/images/groups/guitar.jpg",
+    image: mosaic,
     href: "/groups/guitar",
-  },
-  {
-    id: "ukulele",
-    title: "Ukulele",
-    description:
-      "Pick up your ukulele and enjoy relaxed group playing with other musicians.",
-    icon: faGuitar,
-    colour: "var(--yellow)",
-    image: "/images/groups/ukulele.jpg",
-    href: "/groups/ukulele",
-  },
-  {
-    id: "mixed-ensembles",
-    title: "Mixed Ensembles",
-    description:
-      "Explore smaller combinations of instruments and discover something new.",
-    icon: faItunesNote,
-    colour: "var(--pink)",
-    image: "/images/groups/mixed.jpg",
-    href: "/groups/mixed-ensembles",
   },
 ];

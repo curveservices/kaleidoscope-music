@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
-import logo from "../../assets/images/logo.png";
+import logo from "../../assets/images/logo.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import MenuToggle from "../../components/menuToggle";
 import Button from "../../components/button";
@@ -117,10 +117,10 @@ const Navbar = () => {
             </div>
             <div className="mobile-icon text small menu-container">
               <FontAwesomeIcon icon={faEnvelopeOpen} />
-              bprankard@me.com
+              kaleidoscope@email.com
             </div>
             <div className="mobile-icon text small menu-container">
-              <FontAwesomeIcon icon={faPhone} /> 07702 056378
+              <FontAwesomeIcon icon={faPhone} /> 07777 888 999
             </div>
           </div>
         </nav>

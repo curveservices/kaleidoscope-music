@@ -18,20 +18,31 @@
     margin: 0 auto;
     padding: 60px 0 60px;
   }
+  &__brand {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 8px;
+  }
+  &__brand-text {
+    font-family: var(--font-heading);
+    max-width: 380px;
+    margin: 0;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+  }
+  &__sub-p {
+    color: var(--yellow);
+    font-size: 12px;
+  }
   &__logo {
-    max-width: 330px;
+    max-width: 430px;
     img {
-      width: 200px;
+      width: 100px;
       height: auto;
       object-fit: cover;
     }
-  }
-  &__logo > p {
-    max-width: 280px;
-    margin: 0;
-    font-size: 12px;
-    margin-left: 0.5rem;
-    color: var(--yellow);
   }
   // ==========================================
   // COLUMNS
@@ -258,6 +269,12 @@
       width: calc(100% - 50px);
 
       padding: 50px 0 60px;
+    }
+
+    &__logo {
+      img {
+        width: 75px;
+      }
     }
 
     &__logo h2 {

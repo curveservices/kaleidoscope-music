@@ -87,7 +87,7 @@
     color: var(--navy);
 
     text-decoration: none;
-
+    transition: all 0.3s ease;
     span {
       display: inline-block;
       font-size: 1.1rem;
@@ -97,6 +97,9 @@
 
     &:hover span {
       transform: translateX(5px);
+    }
+    &:hover {
+      color: var(--pink);
     }
   }
 }

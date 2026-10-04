@@ -19,7 +19,7 @@ const GroupCard = ({ title, description, icon, colour, image, href }) => {
         <p>{description}</p>
 
         <Link to={href} className="group-card__link link">
-          Discover the group
+          more on the {title}
           <span aria-hidden="true">→</span>
         </Link>
       </div>

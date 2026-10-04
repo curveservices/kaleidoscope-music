@@ -64,11 +64,13 @@ const TargetCustomer = ({ eyebrow, heading, headingAccent, p }) => {
             </article>
           ))}
         </div>
-        <Button
-          text="Find out where you fit"
-          link=""
-          background="var(--pink)"
-        />
+        <div className="target-section__btn-container">
+          <Button
+            text="Find out where you fit"
+            link=""
+            background="var(--pink)"
+          />
+        </div>
       </div>
     </section>
   );

@@ -65,10 +65,10 @@ header {
   display: none;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1032px) {
   header {
     justify-content: space-between;
-    padding: 2rem 4rem;
+    padding: 0.5rem 4rem;
     button {
       display: none;
     }
@@ -80,7 +80,7 @@ header {
     .mobile-logo {
       display: block;
 
-      width: 100px;
+      width: 50px;
       height: auto;
 
       object-fit: contain;
@@ -90,11 +90,11 @@ header {
     nav {
       display: none;
       position: fixed;
-      top: 70px;
+      top: 0;
       right: 0;
       width: 100%;
-      height: 100vh;
-      z-index: 999;
+      height: 100dvh;
+      z-index: 0;
       overflow: hidden;
 
       // =====================================
@@ -105,22 +105,23 @@ header {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        background: var(--ivory);
+        background: var(--navy);
+        background-image: url(/src//assets/images/kaleidoscope.png);
+        background-size: cover;
+        background-position-x:right;
+        background-blend-mode:multiply;
         align-items: flex-start;
-
+        z-index: -1;
         gap: 3rem;
-
         padding: 8rem 6rem;
+
+        animation: fadeIn 0.5s backwards;
 
         // ===================================
         // MENU CONTENT
         // ===================================
 
-        > * {
-          position: relative;
-
-          z-index: 2;
-        }
+      
 
         .active {
           border-bottom: none;
@@ -141,7 +142,8 @@ header {
         .text {
           font-size: 18px;
           text-transform: uppercase;
-          color: var(--navy);
+          color: var(--ivory);
+          font-family: var(--font-heading);
           transition: color 0.3s ease;
         }
 
@@ -176,14 +178,16 @@ header {
 
           padding-top: 2rem;
 
-          border-top: 1px solid rgba(200, 169, 106, 0.25);
+          border-top: 1px solid var(--pink);
 
           font-family: var(--font-body);
 
           .text {
             font-size: 16px;
           }
-
+          b {
+            color: var(--pink)
+          }
           .small {
             font-size: 14px;
           }
@@ -195,7 +199,8 @@ header {
 
 @media screen and (max-width: 768px) {
   header {
-    padding: 1rem;
+    padding: 1rem 2rem;
+    background: transparent;
 
     .desktop-btn {
       display: none;
@@ -206,21 +211,9 @@ header {
     }
 
     nav.mobile-show {
-      top: 65px;
-      height: calc(100vh - 65px);
+      height: calc(100dvh - 65px);
       gap: 2rem;
-      padding: 5rem 6rem;
-
-      &::before {
-        width: 900px;
-        height: 900px;
-
-        opacity: 0.15;
-      }
-
-      &::after {
-        inset: 25px;
-      }
+      padding: 8rem  6rem;
 
       .menu-container {
         gap: 28px;

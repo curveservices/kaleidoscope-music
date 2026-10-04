@@ -24,7 +24,7 @@ const NotFound = () => {
           <span className="eyebrow">Wrong note</span>
           <h1>
             
-            Oops! You've wandered <span>off the musical map.</span>
+            Oops! You've wandered <span>off the music sheet.</span>
           </h1>
           <p>
             

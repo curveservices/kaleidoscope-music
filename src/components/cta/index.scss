@@ -77,3 +77,30 @@
     gap: 2rem;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .cta {
+    padding: 2rem 1rem;
+
+    // =============================
+    // IMAGE
+    // =============================
+
+    &__scope-image {
+
+      img {
+        bottom: -2rem;
+        width: 100%;
+      }
+    }
+
+    .header {
+      padding: 0rem;
+    }
+
+    &__btn-container {
+      padding-top: 1rem;
+      gap: 1rem;
+    }
+  }
+}

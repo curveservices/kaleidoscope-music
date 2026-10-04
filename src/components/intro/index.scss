@@ -4,8 +4,6 @@
   gap: 0.25rem;
   padding: 100px 64px 64px;
 
-  overflow: hidden;
-
   &__container {
     width: min(1200px, 50%);
 
@@ -31,7 +29,6 @@
     display: flex;
     flex-shrink: 2;
     gap: 1rem;
-    max-height: 380px;
   }
   &__image {
     position: absolute;
@@ -57,7 +54,7 @@
 // TABLET
 // ===============================
 
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+@media screen and (min-width: 769px) and (max-width: 1032px) {
   .intro-section {
     flex-direction: column;
     gap: 2rem;
@@ -66,6 +63,7 @@
     &__container {
       width: 100%;
       align-items: initial;
+      gap: 0;
     }
 
     &__content {
@@ -78,7 +76,10 @@
 
     &__features {
       justify-content: center;
-      gap: 2rem;
+      gap: 3rem;
+    }
+    &__image {
+      top: 18%;
     }
   }
 }
@@ -90,16 +91,23 @@
 @media screen and (max-width: 768px) {
   .intro-section {
     flex-direction: column;
-    gap: 2rem;
+    gap: 0rem;
     padding: 48px 32px 48px;
 
     &__container {
       width: 100%;
-      align-items: initial;
     }
 
     &__content {
-      max-width: initial;
+      max-width: 100%;
+    }
+
+    &__image {
+
+      img {
+        top: initial;
+        bottom: 0;
+      }
     }
 
     // -------------------------
@@ -107,10 +115,10 @@
     // -------------------------
 
     &__features {
-      flex-direction: column;
-      justify-content: initial;
+      flex-wrap: wrap;
+      justify-content: center;
       align-items: center;
-      gap: 2rem;
+      gap: 1rem;
     }
   }
 }

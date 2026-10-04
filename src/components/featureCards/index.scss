@@ -5,11 +5,12 @@
   flex-direction: column;
   align-items: center;
   width: 220px;
-  height: auto;
-  min-height: 320px;
-  padding: 0.5rem;
+  height: 320px;
+  min-height: 326px;
+  padding: 0.8rem;
   border-radius: 8px;
   overflow: hidden;
+  background: var(--ivory);
   box-shadow: var(--box-shadow);
   transition:
     transform 0.3s ease,
@@ -80,5 +81,16 @@
 
   &:hover &__shape {
     transform: rotate(20deg) scale(1.08);
+  }
+}
+@media screen and (max-width: 768px) {
+  .feature-card {
+    width: 170px;
+    height: 300px;
+    min-height: 300px;
+
+    &__content {
+      max-width: 170px;
+    }
   }
 }

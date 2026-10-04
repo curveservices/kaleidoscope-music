@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from "../../assets/images/logo.png";
+import logo from "../../assets/images/logo.svg";
 import "./index.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
@@ -9,8 +9,13 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer__inner">
         <div className="footer__logo">
-          <img src={logo} alt="Kaleidoscope music groups, Rochester Kent" />
-          <p>Make Music, Find Your People</p>
+          <div className="footer__brand">
+            <img src={logo} alt="Kaleidoscope music groups, Rochester Kent" />
+            <div className="footer__brand-text">
+              <p>Kaleidoscope Music</p>
+              <p className="footer__sub-p">Make Music, Find Your People</p>
+            </div>
+          </div>
         </div>
         <div className="footer__column">
           <h3>Explore</h3>

@@ -13,3 +13,23 @@
     gap: 2rem;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .events-preview {
+    padding: 3rem 2rem;
+
+    .header {
+      h2 {
+        span {
+          display: block;
+          color: var(--teal);
+        }
+      }
+    }
+
+    &__card-container {
+      display: flex;flex-direction: column;
+      gap: 2rem;
+    }
+  }
+}
