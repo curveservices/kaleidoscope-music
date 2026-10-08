@@ -13,7 +13,7 @@ const Footer = () => {
             <img src={logo} alt="Kaleidoscope music groups, Rochester Kent" />
             <div className="footer__brand-text">
               <p>Kaleidoscope Music</p>
-              <p className="footer__sub-p">Make Music, Find Your People</p>
+              <p className="footer__sub-p">Make Music, Make new friends</p>
             </div>
           </div>
         </div>

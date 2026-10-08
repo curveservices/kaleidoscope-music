@@ -10,13 +10,13 @@ header {
   z-index: 1000;
   font-family: var(--font-body);
   font-optical-sizing: auto;
-  background: var(--navy);
+  background: transparent;
   transition: all 2s ease;
   cursor: pointer;
 
   .logo {
     width: auto;
-    height: 50px;
+    height: 100px;
   }
 
   .mobile-logo {
@@ -26,9 +26,9 @@ header {
   nav {
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-transform: capitalize;
+    text-transform: uppercase;
     font-weight: 600;
+    font-size: 18px;
     gap: 3rem;
     color: var(--navy);
 
@@ -80,7 +80,7 @@ header {
     .mobile-logo {
       display: block;
 
-      width: 50px;
+      width: 75px;
       height: auto;
 
       object-fit: contain;

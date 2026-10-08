@@ -12,6 +12,7 @@ const Hero = ({
   h1b,
   h1c,
   p,
+  p1,
   button1Link,
   button1Text,
   button2Link,
@@ -44,7 +45,11 @@ const Hero = ({
               <h1 style={{ color: "var(--teal)" }}>{h1b}</h1>
               <h1 style={{ color: "var(--yellow)" }}>{h1c}</h1>
             </div>
-            <p>{p}</p>
+            <div className="hero__paragraph-content">
+              <p>{p}</p>
+              <p>{p1}</p>
+            </div>
+
             <div className="hero__btn-container">
               <Button
                 text={button1Text}

@@ -1,6 +1,6 @@
 import { groups } from "../../groupsData.js";
 import Hero from "../../components/hero";
-import home from "../../assets/images/home.jpg";
+import home from "../../assets/images/header2.jpg";
 import useScrollState from "../../components/scrollState copy/index.jsx";
 import IntroSection from "../../components/intro";
 import { faMusic } from "@fortawesome/free-solid-svg-icons";
@@ -51,10 +51,11 @@ const Home = () => {
       <Hero
         src={home}
         h1="Make Music."
-        h1a="find"
-        h1b="your"
-        h1c="people."
+        h1a="Make"
+        h1b="new"
+        h1c="friends."
         p="Join a friendly community of musicians in Rochester, Kent - from beginers and returning players to experienced musicians"
+        p1="A range of groups to choose from, including the Kaleidoscope Community Orchestra"
         eyebrow="Kaleidoscope music groups"
         button1Text="Find you group"
         button1Link=""
