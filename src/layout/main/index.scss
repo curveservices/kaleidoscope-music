@@ -18,7 +18,7 @@
   .events-page,
   .groups-page,
   .contact-page {
-    animation: fadeIn 0.5s forwards;
+    animation: fadeIn 0.3s forwards;
     h1 {
       margin: 0;
       font-family: var(--font-heading);
@@ -43,7 +43,7 @@
     }
     p {
       font-family: var(--font-body);
-      font-weight: 700;
+      font-weight: 600;
       font-size: 18px;
     }
 
@@ -59,7 +59,7 @@
         }
       }
       p {
-        max-width: 550px;
+        max-width: 650px;
       }
     }
     .eyebrow {
@@ -70,7 +70,7 @@
       letter-spacing: 0.11em;
       text-transform: uppercase;
       color: var(--pink);
-      animation: fadeIn 0.3s 0.5s backwards;
+      animation: fadeInUp 0.4s 0.4s backwards;
     }
   }
   .link {

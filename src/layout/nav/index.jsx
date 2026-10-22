@@ -72,7 +72,7 @@ const Navbar = () => {
             </div>
           </NavLink>
           <NavLink
-            to="/about-us"
+            to="/groups"
             className={({ isActive }) => (isActive ? "active" : "")}
             onClick={() => setShowNav(false)}
           >

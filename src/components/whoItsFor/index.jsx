@@ -1,37 +1,10 @@
-import {
-  faRedo,
-  faStarHalfStroke,
-  faUser,
-} from "@fortawesome/free-solid-svg-icons";
 import Button from "../button";
 import target from "../../assets/images/target.jpg";
 import "./index.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const TargetCustomer = ({ eyebrow, heading, headingAccent, p }) => {
-  const targets = [
-    {
-      id: 1,
-      icon: faUser,
-      title: "New to Playing?",
-      p: "Start your musical journey with us.",
-      color: "var(--pink)",
-    },
-    {
-      id: 2,
-      icon: faRedo,
-      title: "Getting back into it?",
-      p: "Rediscover the joy of playing",
-      color: "var(--teal)",
-    },
-    {
-      id: 3,
-      icon: faStarHalfStroke,
-      title: "Already experienced?",
-      p: "Find a group to challenge you",
-      color: "var(--violet)",
-    },
-  ];
+const TargetCustomer = ({ eyebrow, heading, headingAccent, p, targets }) => {
+
   return (
     <section className="target-section">
       <div className="target-section__image">
@@ -67,7 +40,7 @@ const TargetCustomer = ({ eyebrow, heading, headingAccent, p }) => {
         <div className="target-section__btn-container">
           <Button
             text="Find out where you fit"
-            link=""
+            link="/groups"
             background="var(--pink)"
           />
         </div>

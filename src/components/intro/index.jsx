@@ -3,12 +3,12 @@ import FeatureCard from "../featureCards";
 import scope from "../../assets/images/small-kaleidoscope.png";
 
 const IntroSection = ({
-  eyebrow = "MORE THAN MUSIC",
+  eyebrow,
   h2,
   headingAccent,
   p1,
   p2,
-  features = [],
+  features,
 }) => {
   return (
     <section className="intro-section">

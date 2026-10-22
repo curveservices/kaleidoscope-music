@@ -4,8 +4,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 220px;
-  height: 320px;
+  width: fit-content;
   min-height: 326px;
   padding: 0.8rem;
   border-radius: 8px;
@@ -47,8 +46,9 @@
     position: relative;
     z-index: 2;
 
-    max-width: 220px;
+    max-width: 520px;
     margin-top: 2rem;
+    
   }
 
   h3 {
@@ -61,11 +61,16 @@
     line-height: 1.65;
     letter-spacing: -0.01em;
     font-size: 0.9rem;
+    font-weight: 700;
+  }
+  &__btn {
+    margin: 1rem 0;
+    z-index: 2;
   }
 
   &__shape {
     position: absolute;
-    z-index: 2;
+    z-index: 1;
     right: -60px;
     bottom: -70px;
 

@@ -1,0 +1,134 @@
+.text-image {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    height: 90dvh;
+    gap: 0.25rem;
+    padding: 100px 64px 64px;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding-left: 2rem;
+        align-items: start;
+    }
+    &__image {
+        position: absolute;
+        top: 10%;
+        left: 4%;
+        z-index: 0;
+        overflow: hidden;
+        margin: 0rem auto 0;
+        width: 550px;
+        height: 550px;
+        background: var(--navy);
+        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        animation: fadeIn 0.4s 0.4s backwards;
+
+        img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center center;
+            opacity: 0.65;
+        }
+    }
+    // ----------------------------------------
+    // DECORATIVE SHAPES
+    // ----------------------------------------
+    &__background {
+        position: absolute;
+        top: 0;
+        inset: 0;
+        pointer-events: none;
+    }
+
+    .shape {
+        position: absolute;
+        width: 180px;
+        height: 180px;
+        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+
+        transition: transform 0.6s ease;
+        animation: fadeIn 0.4s 0.5s backwards;
+    }
+
+    .shape--pink {
+        top: 5%;
+        left: 26%;
+        width: 150px;
+        height: 150px;
+        background: var(--pink);
+        transform: rotate(0deg);
+        opacity: 0.8;
+    }
+
+    .shape--teal {
+        top: 24%;
+        left: 6%;
+        width: 110px;
+        height: 110px;
+        background: var(--teal);
+        transform: rotate(0deg);
+    }
+
+    .shape--yellow {
+        left: 1%;
+        bottom: 3%;
+        width: 230px;
+        height: 230px;
+        background: var(--yellow);
+        opacity: 0.75;
+        transform: rotate(0deg);
+    }
+
+    .shape--violet {
+        bottom: 14%;
+        left: 34%;
+        width: 220px;
+        height: 220px;
+        background: var(--violet);
+        opacity: 0.8;
+    }
+
+    .shape--blue {
+        bottom: 15%;
+        left: 28%;
+        width: 120px;
+        height: 120px;
+        background: var(--blue);
+        opacity: 0.95;
+    }
+
+}
+@media screen and (min-width: 769px) and (max-width: 1032px) {
+    .text-image {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 48px 64px 48px;
+
+        &__container {
+            width: 100%;
+            align-items: initial;
+            gap: 0;
+        }
+    }
+}
+// ================================
+// MOBILE
+// ================================
+
+@media screen and (max-width: 768px) {
+    .intro-section {
+        flex-direction: column;
+        gap: 0rem;
+        padding: 48px 32px 48px;
+
+        &__container {
+            width: 100%;
+        }
+    }
+}

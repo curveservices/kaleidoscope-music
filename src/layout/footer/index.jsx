@@ -21,7 +21,7 @@ const Footer = () => {
           <h3>Explore</h3>
           <nav className="footer__nav">
             <Link to="/">Home</Link>
-            <Link to="/about">About</Link>
+            <Link to="/about-us">About</Link>
             <Link to="/groups">Groups</Link>
             <Link to="/events">Events</Link>
             <Link to="/gallery">Gallery</Link>

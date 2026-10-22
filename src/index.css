@@ -5,7 +5,7 @@
   --teal: #4FC2C3;
   --yellow: #E9C91D;
   --violet: #874bb5;
-  --blue: #39b9d0;
+  --blue: #3131e6;
   --section: #eef7f6;
 
   --font-heading: "Outfit", sans-serif;
@@ -32,7 +32,7 @@
 html {
   height: 100%;
   width: 100vw;
-  background: var(--background);
+  background: var(--navy);
   overflow-x: hidden;
 }
 

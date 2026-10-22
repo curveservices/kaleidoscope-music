@@ -13,6 +13,7 @@ import { lazy } from "react";
 const Layout = lazy(() => import("./layout/main/index.jsx"));
 const NotFound = lazy(() => import("./pages/404/index.jsx"));
 const Home = lazy(() => import("./pages/home/index.jsx"));
+const About = lazy(() => import("./pages/about/index.jsx"));
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
@@ -25,6 +26,14 @@ const router = createBrowserRouter(
             </Suspense>
           }
         />
+        <Route
+          path="/about-us"
+          element={
+            <Suspense fallback={<LoadingSpinner />}>
+              <About />
+            </Suspense>
+          }
+        /> 
       </Route>
       <Route
         path="*"
