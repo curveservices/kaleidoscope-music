@@ -16,6 +16,9 @@
   --box-shadow: 4px 15px 25px rgba(0, 0, 0, 0.3);
   --box-shadow-hover: 0 20px 40px rgba(24, 44, 66, 0.15);
 
+  --mobile-section: 64px 24px;
+  --tablet-section: 64px;
+
   color-scheme: light dark;
   font-synthesis: none;
   text-rendering: optimizeLegibility;

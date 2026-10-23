@@ -4,12 +4,12 @@ import {
   faWandSparkles,
 } from "@fortawesome/free-solid-svg-icons";
 import { faItunesNote, faShoelace } from "@fortawesome/free-brands-svg-icons";
-import mosaic from "./assets/images/event5.jpg";
-import sax from "./assets/images/sax.png";
+import mosaic from "./assets/images/mosaic.webp";
+import sax from "./assets/images/sax.webp";
 import home from "./assets/images/home.jpg";
-import strings from "./assets/images/event3.jpg";
-import flutes from "./assets/images/flutes.jpg";
-import clarinet from "./assets/images/clarinet.jpg";
+import strings from "./assets/images/strings.webp";
+import flutes from "./assets/images/flutes.webp";
+import clarinet from "./assets/images/clarinets.webp";
 
 export const groups = [
   {

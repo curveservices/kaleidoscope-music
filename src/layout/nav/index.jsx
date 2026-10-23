@@ -92,16 +92,6 @@ const Navbar = () => {
             </div>
           </NavLink>
           <NavLink
-            to="/gallery"
-            className={({ isActive }) => (isActive ? "active" : "")}
-            onClick={() => setShowNav(false)}
-          >
-            <div className="menu-container">
-              <FontAwesomeIcon icon={faImage} className="mobile-icon" />
-              <div className="text">Gallery</div>
-            </div>
-          </NavLink>
-          <NavLink
             to="/contact-us"
             className={({ isActive }) => (isActive ? "active" : "")}
             onClick={() => setShowNav(false)}

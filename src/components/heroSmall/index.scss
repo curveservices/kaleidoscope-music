@@ -182,61 +182,62 @@
 }
 
 @media screen and (min-width: 769px) and (max-width: 1032px) {
-  .hero {
-  display: flex;
-    flex-direction: column;
-    overflow: hidden;
+  .small-hero {
+
     // =============================
     // IMAGE
     // =============================
-  
+
     &__image {
-      position: relative;
-      inset: auto;
-      order: 1;
-      width: 100%;
-      height: 31vh;
-      min-height: 200px;
-      overflow: hidden;
-  
-      img {
-        width: 100%;
-        height: 32dvh;
-        display: block;
-        filter: none;
-      }
+      top: 40%;
+      right: 0;
+      width: 750px;
+      height: 750px;
     }
-  
-    &__scope-image {
-      margin-top: 0rem;
-      transform: translateY(-20%) rotateY(180deg);
+
+    // ----------------------------------------
+    // DECORATIVE SHAPES
+    // ----------------------------------------
+    .shape--pink {
+      top: 35%;
     }
-  
+
+    .shape--yellow {
+      right: 41%;
+      bottom: 0;
+      width: 250px;
+      height: 250px;
+    }
+
+    .shape--violet {
+      bottom: 10%;
+      right: 0%;
+    }
+
+    .shape--blue {
+      bottom: 8%;
+      right: 17%;
+      opacity: 1;
+    }
+
     &__image-overlay {
-      position: absolute;
-      inset: 0;
-      z-index: 1;
-      display: block;
-      pointer-events: none;
-      overflow: hidden;
+      background: linear-gradient(55deg,
+          rgba(14, 26, 43, 1) 0%,
+          rgba(14, 26, 43, 0.48) 35%,
+          rgba(14, 26, 43, 0.18) 70%,
+          rgba(14, 26, 43, 0.08) 100%);
     }
-  
+
     &__content {
-      position: relative;
-      order: 2;
-      width: 100%;
-      min-height: auto;
-      margin-top: 0;
-      padding: 4rem;
-      display: flex;
-      align-items: flex-start;
+      margin-top: 8rem;
     }
-  
-    &__inner {
-      position: relative;
-      width: 100%;
-      max-width: none;
-      z-index: 1;
+
+    // ==============================
+    // HEADING
+    // ==============================
+
+    &__btn-container {
+      gap: 2.5rem;
     }
   }
 }
@@ -246,85 +247,86 @@
 // ===============
 
 @media screen and (max-width: 768px) {
-  .hero {
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    // =============================
-    // IMAGE
-    // =============================
+  .small-hero {
+  
+      // =============================
+      // IMAGE
+      // =============================
+  
+      &__image {
+        top: initial;
+        bottom: 0;
+        right: 0;
+        width: 400px;
+        height: 400px;
+      }
+  
+      // ----------------------------------------
+      // DECORATIVE SHAPES
+      // ----------------------------------------
+      .shape--pink {
+        top: 57%;
+        right:initial;
+        left: 3%;
+        width: 100px;
+        height: 100px;
+      }
 
-    &__image {
-      position: relative;
-      inset: auto;
-      order: 1;
-      width: 100%;
-      height: 31vh;
-      min-height: 200px;
-      overflow: hidden;
-      img {
-        width: 100%;
-        height: 32dvh;
-        display: block;
+      .shape--teal {
+        top: 56%;
+        right: 14%;
+        width: 80px;
+        height: 80px;
+      }
+
+      .shape--yellow {
+        right: initial;
+        left: -15%;
+        bottom: -5%;
+        width: 200px;
+        height: 200px;
+      }
+
+      .shape--violet {
+        bottom: 5%;
+        right: -10%;
+        width: 135px;
+        height: 135px;
+      }
+
+      .shape--blue {
+        bottom: 0;
+        right: 15%;
+        width: 90px;
+        height: 90px;
+        background: var(--blue);
+        opacity: 0.95;
+      }
+  
+      &__image-overlay {
+        background: linear-gradient(55deg,
+            rgba(14, 26, 43, 1) 0%,
+            rgba(14, 26, 43, 0.28) 35%,
+            rgba(14, 26, 43, 0.18) 70%,
+            rgba(14, 26, 43, 0.08) 100%);
+      }
+  
+      &__content {
+        margin-top: 3rem;
+        padding: 70px 24px;
+      }
+  
+      // ==============================
+      // HEADING
+      // ==============================
+  
+      &__btn-container {
+        gap: 1.5rem;
+      }
+      ul {
+        li {
+          font-size: 11px;
+        }
       }
     }
-
-    &__scope-image {
-      margin-top: 0rem;
-      transform: translateY(-20%) rotateY(180deg);
-    }
-
-    &__image-overlay {
-     position: absolute;
-     inset: 0;
-     z-index: 1;
-     display: block;
-     pointer-events: none;
-     overflow: hidden;
-    }
-
-    &__content {
-      position: relative;
-      order: 2;
-      width: 100%;
-      min-height: auto;
-      margin-top: 0;
-      padding: 4rem 2rem;
-      display: flex;
-      align-items: flex-start;
-    }
-
-    &__inner {
-      position: relative;
-      width: 100%;
-      max-width: none;
-      z-index: 1;
-    }
-
-    // ==============================
-    // HEADING
-    // ==============================
-
-    .h1-color {
-      gap: 0.5rem;
-    }
-
-    &__paragraph-content {
-      max-width: 100%;
-    }
-
-    ul {
-      display: flex;
-      font-weight: 600;
-      gap: 1.5rem;
-      margin-top: 2rem;
-      margin-left: 0.75rem;
-      font-size: 11px;
-    }
-
-    &__btn-container {
-      display: inline-flex;
-      gap: 1.25rem;
-    }
-  }
 }

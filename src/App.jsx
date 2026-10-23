@@ -14,6 +14,9 @@ const Layout = lazy(() => import("./layout/main/index.jsx"));
 const NotFound = lazy(() => import("./pages/404/index.jsx"));
 const Home = lazy(() => import("./pages/home/index.jsx"));
 const About = lazy(() => import("./pages/about/index.jsx"));
+const Groups = lazy(() => import("./pages/groups/index.jsx"));
+const Events = lazy(() => import("./pages/events/index.jsx"));
+
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
@@ -33,8 +36,25 @@ const router = createBrowserRouter(
               <About />
             </Suspense>
           }
-        /> 
+        />
+        <Route
+          path="/groups"
+          element={
+            <Suspense fallback={<LoadingSpinner />}>
+              <Groups />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/events"
+          element={
+            <Suspense fallback={<LoadingSpinner />}>
+              <Events/>
+            </Suspense>
+          }
+        />
       </Route>
+
       <Route
         path="*"
         element={

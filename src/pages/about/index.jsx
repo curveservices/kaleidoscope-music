@@ -1,7 +1,7 @@
 import "./index.scss";
-import about from "../../assets/images/about.png";
+import about from "../../assets/images/flutes.webp";
 import people from "../../assets/images/people.webp";
-import SmallHero from "../../components/smalllHero";
+import SmallHero from "../../components/heroSmall";
 import useScrollState from "../../components/scrollState";
 import scope from "../../assets/images/small-kaleidoscope.png";
 import {

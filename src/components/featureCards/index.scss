@@ -88,14 +88,29 @@
     transform: rotate(20deg) scale(1.08);
   }
 }
+// =============
+// TABLET
+// =============
+@media screen and (min-width: 769px) and (max-width: 1032px) {
+  .feature-card {
+    width: 400px;
+    min-height: 326px;
+    padding: 1.5rem;
+
+    &__shape {
+      width: 200px;
+      height: 200px;
+    }
+  }
+}
 @media screen and (max-width: 768px) {
   .feature-card {
-    width: 170px;
-    height: 300px;
-    min-height: 300px;
+    width: 350px;
+    min-height: 250px;
+    padding: 1.5rem;
 
     &__content {
-      max-width: 170px;
+      max-width: initial;
     }
   }
 }
