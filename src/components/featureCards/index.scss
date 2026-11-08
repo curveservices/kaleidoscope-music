@@ -35,6 +35,7 @@
     height: auto;
     padding: 0.5rem;
     border-radius: 100%;
+    box-shadow: var(--button);
     transition: all 0.3s ease-in-out;
     svg {
       color: var(--ivory);
@@ -80,7 +81,6 @@
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 
     opacity: 0.4;
-
     transition: transform 0.4s ease;
   }
 

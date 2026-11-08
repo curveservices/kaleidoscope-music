@@ -185,10 +185,6 @@ export default function Testimonials() {
               ))}
             </Slider>
           </div>
-
-          <p className="testimonials__footer">
-            Your next musical chapter could start here.
-          </p>
         </div>
       </section>
 

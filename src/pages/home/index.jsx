@@ -92,7 +92,7 @@ const Home = () => {
         button1Text="Find your group"
         button1Link="/groups"
         button2Text="Come & Play"
-        button2Link=""
+        button2Link="/groups"
       />
       <FadeInSection>
         <IntroSection

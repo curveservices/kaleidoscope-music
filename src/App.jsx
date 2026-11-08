@@ -16,6 +16,11 @@ const Home = lazy(() => import("./pages/home/index.jsx"));
 const About = lazy(() => import("./pages/about/index.jsx"));
 const Groups = lazy(() => import("./pages/groups/index.jsx"));
 const Events = lazy(() => import("./pages/events/index.jsx"));
+const Orchestra = lazy(() => import("./pages/orchestra/index.jsx"));
+const Strings = lazy(() => import("./pages/strings/index.jsx"));
+const Flutes = lazy(() => import("./pages/flutes/index.jsx"));
+const Clarinets = lazy(() => import("./pages/clarinet/index.jsx"));
+const Saxophones = lazy(() => import("./pages/saxophone/index.jsx"));
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -49,7 +54,47 @@ const router = createBrowserRouter(
           path="/events"
           element={
             <Suspense fallback={<LoadingSpinner />}>
-              <Events/>
+              <Events />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/community-orchestra"
+          element={
+            <Suspense fallback={<LoadingSpinner />}>
+              <Orchestra />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/string-orchestra"
+          element={
+            <Suspense fallback={<LoadingSpinner />}>
+              <Strings />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/flute-choir"
+          element={
+            <Suspense fallback={<LoadingSpinner />}>
+              <Flutes />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/clarinet-choir"
+          element={
+            <Suspense fallback={<LoadingSpinner />}>
+              <Clarinets />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/saxophone-choir"
+          element={
+            <Suspense fallback={<LoadingSpinner />}>
+              <Saxophones />
             </Suspense>
           }
         />

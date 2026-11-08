@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./index.scss";
 import Button from "../button";
-const FeatureCard = ({ icon, title, description, color, display }) => {
+const FeatureCard = ({ icon, title, description, color, display, buttonLink }) => {
   return (
     <article className={`feature-card feature-card--${color}`}>
       <div className="feature-card__top">
@@ -17,7 +17,7 @@ const FeatureCard = ({ icon, title, description, color, display }) => {
         <p>{description}</p>
       </div>
       <div className="feature-card__btn">
-        <Button text={title} display={display} />
+        <Button text={title} display={display} link={buttonLink} />
       </div>
 
       <span

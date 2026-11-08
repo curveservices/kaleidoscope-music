@@ -5,12 +5,12 @@
   text-align: center;
   width: fit-content;
   padding: 0.75rem 1.25rem;
-  border: 2px solid var(--ivory);
+  border: none;
   border-radius: 50px;
   font-family: var(--font-body);
   font-size: 0.9rem;
   font-weight: 600;
-  box-shadow: var(--button-shadow);
+  box-shadow: var(--button);
   transition: all 0.3s ease;
   cursor: pointer;
   span {
@@ -20,7 +20,6 @@
   }
   &:hover {
     box-shadow: var(--button-hover);
-    border: 2px solid var(--pink);
     transform: translateY(-2px);
     span {
       transform: translateX(5px);

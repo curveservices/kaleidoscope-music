@@ -45,10 +45,10 @@
         border-radius: 10px;
         transition: all 0.3s ease-in-out;
         &:hover {
-            transform: translateY(-2px);
+            transform: translateY(-1px);
             background-color: var(--navy);
             color: var(--ivory);
-            box-shadow: var(--box-shadow);
+            box-shadow: var(--button-hover);
             svg {
                 color: var(--yellow);
                 transform: scale(1.1);

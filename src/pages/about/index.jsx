@@ -41,6 +41,7 @@ const About = () => {
       description:
         "As well as the Kaleidoscope Community Orchestra there is a string ensemble, Clarinet, Flute and Saxophone choirs, a mixed instrument group called Mosaic Sounds and a folk group. Full details of each group can be found here.",
       color: "var(--teal)",
+      buttonLink: "/groups",
     },
     {
       id: 3,

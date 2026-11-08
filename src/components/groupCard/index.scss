@@ -10,7 +10,7 @@
     box-shadow 0.3s ease;
 
   &:hover {
-    transform: translateY(-4px);
+    transform: translateY(-2px);
 
     box-shadow: var(--box-shadow-hover);
     .group-card__icon {
@@ -67,10 +67,13 @@
 
     font-size: 1.1rem;
     color: var(--ivory);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: var(--button);
     transition: all 0.3s ease-in-out;
     svg {
       transition: all 0.3s ease-in-out;
+    }
+    &:hover {
+      box-shadow: var(--button-hover);
     }
   }
   // --------------------------------

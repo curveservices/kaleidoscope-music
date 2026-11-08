@@ -17,7 +17,8 @@
   .about-page,
   .events-page,
   .groups-page,
-  .contact-page {
+  .contact-page,
+  .group-page{
     animation: fadeIn 0.3s forwards;
     h1 {
       margin: 0;
@@ -51,7 +52,11 @@
       margin-bottom: 2rem;
       line-height: 1.4;
       letter-spacing: 0.04em;
-
+      .h1-color {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
       h2 {
         text-transform: capitalize;
         span {
@@ -119,25 +124,28 @@
   bottom: 6rem;
   left: 1.2rem;
   padding: 10px;
-  background: var(--pink);
+  background: linear-gradient(135deg, #DF3393, #fe724f);
   color: var(--ivory);
   font-size: 0.9rem;
   letter-spacing: 2px;
-  border: solid 2px var(--ivory);
+  border: none;
   border-radius: 50px;
   text-align: center;
   width: fit-content;
   padding: 0.75rem 1.25rem;
-  box-shadow: var(--button-shadow);
+  box-shadow: var(--button);
   z-index: 999;
   cursor: pointer;
   animation: fadeInUp 2s;
   transition: all 0.3s ease-in-out;
 
   &:hover {
-    box-shadow: var(--button-hover);
-    border: solid 2px var(--pink);
-    transform: translateY(-2px);
+    translate: 0 1px;
+    box-shadow: inset 0 2px 4px #0004;
+  }
+  &:active {
+    translate: 0 1px;
+    box-shadow: inset 0 2px 4px #0004;
   }
 }
 @media screen and (max-width: 768px) {

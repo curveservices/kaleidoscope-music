@@ -1,7 +1,6 @@
 import "./index.scss";
 import { Suspense } from "react";
 import LoadingSpinner from "../loadingSpinner";
-import kaleidoscope from "../../assets/images/kaleidoscope.png";
 import Button from "../button";
 
 const SmallHero = ({
@@ -63,7 +62,7 @@ const SmallHero = ({
               <Button
                 text={button2Text}
                 link={button2Link}
-                background="rgba(255, 255, 255, 0.05)"
+                background="var(--teal)"
               />
             </div>
             <ul>

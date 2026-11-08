@@ -8,19 +8,19 @@ import mosaic from "./assets/images/mosaic.webp";
 import sax from "./assets/images/sax.webp";
 import home from "./assets/images/home.jpg";
 import strings from "./assets/images/strings.webp";
-import flutes from "./assets/images/flutes.webp";
+import flutes from "./assets/images/flutes.jpg";
 import clarinet from "./assets/images/clarinets.webp";
 
 export const groups = [
   {
-    id: "kirby-orchestra",
-    title: "Kirby Orchestra",
+    id: "community-orchestra",
+    title: "Community Orchestra",
     description:
       "Bring your instrument and make music as part of our full community orchestra.",
     icon: faGopuram,
     colour: "var(--violet)",
     image: home,
-    href: "/groups/kirby-orchestra",
+    href: "/community-orchestra",
   },
   {
     id: "string-orchestra",
@@ -30,7 +30,7 @@ export const groups = [
     icon: faShoelace,
     colour: "var(--pink)",
     image: strings,
-    href: "/groups/string-orchestra",
+    href: "/string-orchestra",
   },
   {
     id: "flute-choir",
@@ -40,7 +40,7 @@ export const groups = [
     icon: faItunesNote,
     colour: "var(--teal)",
     image: flutes,
-    href: "/groups/flute-choir",
+    href: "/flute-choir",
   },
   {
     id: "clarinet-choir",
@@ -50,16 +50,16 @@ export const groups = [
     icon: faWandSparkles,
     colour: "var(--yellow)",
     image: clarinet,
-    href: "/groups/clarinet-ensemble",
+    href: "/clarinet-choir",
   },
   {
-    id: "saxophone-ensemble",
-    title: "Saxophone Ensemble",
-    description: "Make a big sound together with our saxophone ensemble.",
+    id: "saxophone-choir",
+    title: "Saxophone Choir",
+    description: "Make a big sound together with our saxophone choir.",
     icon: faWandSparkles,
     colour: "var(--blue)",
     image: sax,
-    href: "/groups/saxophone-ensemble",
+    href: "/saxophone-choir",
   },
   {
     id: "mosaic-sounds",
@@ -69,6 +69,6 @@ export const groups = [
     icon: faGuitar,
     colour: "var(--violet)",
     image: mosaic,
-    href: "/groups/guitar",
+    href: "/mosaic-sounds",
   },
 ];

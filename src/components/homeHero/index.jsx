@@ -59,7 +59,7 @@ const Hero = ({
               <Button
                 text={button2Text}
                 link={button2Link}
-                background="rgba(255, 255, 255, 0.05)"
+                background="var(--violet)"
               />
             </div>
             <ul>
