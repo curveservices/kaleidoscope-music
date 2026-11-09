@@ -17,7 +17,7 @@ const FeatureCard = ({ icon, title, description, color, display, buttonLink }) =
         <p>{description}</p>
       </div>
       <div className="feature-card__btn">
-        <Button text={title} display={display} link={buttonLink} />
+        <Button text={title} display={display} link={buttonLink} background="var(--navy)" />
       </div>
 
       <span

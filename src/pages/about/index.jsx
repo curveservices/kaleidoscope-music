@@ -139,6 +139,7 @@ const About = () => {
           p1="Kaleidoscope music groups brings musicians together to play, learn, improve and enjoy music as part of a community."
           buttonLink="/groups"
           buttonText="Find Your group"
+          buttonColor="var(--pink)"
           src={people}
         />
       </FadeInSection>

@@ -26,7 +26,7 @@ const CTA = () => {
           link="/contact-us"
           background="var(--pink)"
         />
-        <Button text="Find your group" link="/groups" />
+        <Button text="Find your group" link="/groups" background="var(--navy)" />
       </div>
     </section>
   );

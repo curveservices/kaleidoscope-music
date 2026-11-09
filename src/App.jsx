@@ -21,6 +21,7 @@ const Strings = lazy(() => import("./pages/strings/index.jsx"));
 const Flutes = lazy(() => import("./pages/flutes/index.jsx"));
 const Clarinets = lazy(() => import("./pages/clarinet/index.jsx"));
 const Saxophones = lazy(() => import("./pages/saxophone/index.jsx"));
+const Mosaic = lazy(() => import("./pages/mosaic/index.jsx"));
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -98,6 +99,14 @@ const router = createBrowserRouter(
             </Suspense>
           }
         />
+        <Route
+          path="/mosaic-sounds"
+          element={
+            <Suspense fallback={<LoadingSpinner />}>
+              <Mosaic />
+            </Suspense>
+          }
+        /> 
       </Route>
 
       <Route
