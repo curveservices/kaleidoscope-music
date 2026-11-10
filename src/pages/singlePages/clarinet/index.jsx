@@ -1,6 +1,6 @@
-import hero from "../../assets/images/clarinets.webp";
-import Beverley from "../../assets/images/bev.jpg";
-import GroupSingle from '../../components/groupSingle'
+import hero from "../../../assets/images/clarinets.webp";
+import Beverley from "../../../assets/images/bev.jpg";
+import GroupSingle from '../../../components/groupSingle'
 
 const Clarinets = () => {
   return (

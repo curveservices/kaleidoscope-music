@@ -1,6 +1,6 @@
-import GroupSingle from "../../components/groupSingle";
-import hero from "../../assets/images/strings.webp";
-import julie from "../../assets/images/julie.JPEG";
+import GroupSingle from "../../../components/groupSingle";
+import hero from "../../../assets/images/strings.webp";
+import julie from "../../../assets/images/julie.JPEG";
 const Strings = () => {
   return (
     <GroupSingle

@@ -1,5 +1,5 @@
-import hero from "../../assets/images/mosaic.webp";
-import GroupSingle from "../../components/groupSingle";
+import hero from "../../../assets/images/mosaic.webp";
+import GroupSingle from "../../../components/groupSingle";
 
 const Mosaic = () => {
   return (

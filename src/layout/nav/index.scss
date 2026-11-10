@@ -209,9 +209,9 @@ header {
     }
 
     nav.mobile-show {
-      height: calc(100dvh - 65px);
+      height: 100dvh;
       gap: 2rem;
-      padding: 8rem  6rem;
+      padding: 10rem 2rem;
 
       .menu-container {
         gap: 28px;
@@ -228,7 +228,7 @@ header {
       .text {
         font-size: 19px;
 
-        letter-spacing: 0.1em;
+        letter-spacing: 0.25em;
       }
 
       .contact-container {
@@ -237,12 +237,12 @@ header {
         padding-top: 25px;
 
         .text {
-          font-size: 16px;
+          font-size: 18px;
           width: 100%;
         }
 
         .small {
-          font-size: 12px;
+          font-size: 14px;
         }
       }
     }

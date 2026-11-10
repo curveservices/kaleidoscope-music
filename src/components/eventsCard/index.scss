@@ -19,7 +19,7 @@
   &__image {
     position: relative;
     overflow: hidden;
-    width: 400px;
+    width: 100%;
     height: 200px;
     background: var(--navy);
     img {
@@ -45,24 +45,25 @@
     position: absolute;
     left: 0px;
     top: 0px;
-    padding: 1rem;
-    border-radius: 8px;
+    height: 100%;
+    padding: 1rem 0.75rem;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     color: var(--ivory);
     text-align: center;
     line-height: 2.5rem;
-    background: var(--navy);
     transition: all 0.3s ease-in-out;
   }
-  &__month {
-    font-size: 1.5rem;
-    font-weight: 800;
+  &__month{
+    font-size: 1.3rem;
+    font-weight: 700;
   }
+
   &__day {
     font-size: 3rem;
     font-weight: 900;
-    margin-bottom: 0.5rem;
+    margin: 0.75rem 0;
   }
 
   // ========================

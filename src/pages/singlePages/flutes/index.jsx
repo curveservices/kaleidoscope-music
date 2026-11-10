@@ -1,6 +1,6 @@
-import hero from "../../assets/images/flutes.jpg";
-import Beverley from "../../assets/images/bev.jpg";
-import GroupSingle from '../../components/groupSingle'
+import hero from "../../../assets/images/flutes.jpg";
+import Beverley from "../../../assets/images/bev.jpg";
+import GroupSingle from '../../../components/groupSingle'
 
 const Flutes = () => {
   return (

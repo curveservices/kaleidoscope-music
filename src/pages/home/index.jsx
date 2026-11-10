@@ -84,8 +84,8 @@ const Home = () => {
         src={home}
         h1="Make Music."
         h1a="Make"
-        h1b="new"
-        h1c="friends."
+        h1b="New"
+        h1c="Friends."
         p="Join a friendly community of musicians in Rochester, Kent - from beginners and returning players to experienced musicians"
         p1="A range of groups to choose from, including the Kaleidoscope Community Orchestra"
         eyebrow="Kaleidoscope music groups"

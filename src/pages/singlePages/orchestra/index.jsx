@@ -1,6 +1,6 @@
-import GroupSingle from '../../components/groupSingle';
-import hero from "../../assets/images/home.jpg";
-import julie from "../../assets/images/julie.JPEG";
+import GroupSingle from "../../../components/groupSingle";
+import hero from "../../../assets/images/home.jpg";
+import julie from "../../../assets/images/julie.JPEG";
 
 const Orchestra = () => {
   return (
@@ -57,6 +57,6 @@ const Orchestra = () => {
         performances."
     />
   );
-}
+};
 
 export default Orchestra;

@@ -16,12 +16,12 @@ const Home = lazy(() => import("./pages/home/index.jsx"));
 const About = lazy(() => import("./pages/about/index.jsx"));
 const Groups = lazy(() => import("./pages/groups/index.jsx"));
 const Events = lazy(() => import("./pages/events/index.jsx"));
-const Orchestra = lazy(() => import("./pages/orchestra/index.jsx"));
-const Strings = lazy(() => import("./pages/strings/index.jsx"));
-const Flutes = lazy(() => import("./pages/flutes/index.jsx"));
-const Clarinets = lazy(() => import("./pages/clarinet/index.jsx"));
-const Saxophones = lazy(() => import("./pages/saxophone/index.jsx"));
-const Mosaic = lazy(() => import("./pages/mosaic/index.jsx"));
+const Orchestra = lazy(() => import("./pages/singlePages/orchestra/index.jsx"));
+const Strings = lazy(() => import("./pages/singlePages/strings/index.jsx"));
+const Flutes = lazy(() => import("./pages/singlePages/flutes/index.jsx"));
+const Clarinets = lazy(() => import("./pages/singlePages/clarinet/index.jsx"));
+const Saxophones = lazy(() => import("./pages/singlePages/saxophone/index.jsx"));
+const Mosaic = lazy(() => import("./pages/singlePages/mosaic/index.jsx"));
 
 const router = createBrowserRouter(
   createRoutesFromElements(
