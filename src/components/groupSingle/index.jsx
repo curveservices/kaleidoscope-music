@@ -6,37 +6,33 @@ import flutes from "../../assets/images/flutes.jpg";
 import "./index.scss";
 import Button from "../button";
 import FeatureCard from "../featureCards";
-import {
-  faClock,
-  faCalendarDays,
-} from "@fortawesome/free-solid-svg-icons";
-
+import { faClock, faCalendarDays } from "@fortawesome/free-solid-svg-icons";
 
 const GroupSingle = (props) => {
-    const FadeInSection = ({ children }) => {
-        useScrollState();
-        return <div className="fade-in-on-scroll">{children}</div>
-    };
-    const features = [
-      {
-        id: 1,
-        number: "01",
-        icon: faClock,
-        title: "Rehearsals Times",
-        description: `${props.time}`,
-        color: "var(--pink)",
-        display: "none",
-      },
-      {
-        id: 2,
-        number: "02",
-        icon: faCalendarDays,
-        title: "Rehearsals Days",
-        description: `${props.days}`,
-        color: "var(--teal)",
-        display: "none",
-      },
-    ];
+  const FadeInSection = ({ children }) => {
+    useScrollState();
+    return <div className="fade-in-on-scroll">{children}</div>;
+  };
+  const features = [
+    {
+      id: 1,
+      number: "01",
+      icon: faClock,
+      title: "Rehearsals Times",
+      description: `${props.time}`,
+      color: "var(--pink)",
+      display: "none",
+    },
+    {
+      id: 2,
+      number: "02",
+      icon: faCalendarDays,
+      title: "Rehearsals Days",
+      description: `${props.days}`,
+      color: "var(--teal)",
+      display: "none",
+    },
+  ];
   return (
     <div className="group-page">
       <HomeHero
@@ -97,6 +93,6 @@ const GroupSingle = (props) => {
       </FadeInSection>
     </div>
   );
-}
+};
 
 export default GroupSingle;

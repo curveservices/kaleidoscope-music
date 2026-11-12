@@ -32,7 +32,7 @@ const Home = () => {
       description:
         "Make music with other people in a friendly and supportive environment.",
       color: "var(--pink)",
-      display: "none"
+      display: "none",
     },
     {
       id: 2,
@@ -42,7 +42,7 @@ const Home = () => {
       description:
         "Meet people who share your love of music and become part of a community.",
       color: "var(--teal)",
-      display: "none"
+      display: "none",
     },
     {
       id: 3,
@@ -52,7 +52,7 @@ const Home = () => {
       description:
         "Build confidence, develop your playing and discover new musical challenges.",
       color: "var(--yellow)",
-      display: "none"
+      display: "none",
     },
   ];
   const homeTargets = [
@@ -91,8 +91,8 @@ const Home = () => {
         eyebrow="Kaleidoscope music groups"
         button1Text="Find your group"
         button1Link="/groups"
-        button2Text="Come & Play"
-        button2Link="/groups"
+        button2Text="Join Us"
+        button2Link="/contact-us/#join-us"
       />
       <FadeInSection>
         <IntroSection

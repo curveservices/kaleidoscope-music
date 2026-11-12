@@ -1,7 +1,7 @@
 .event-card {
   overflow: hidden;
   background: var(--ivory);
-
+  width: 450px;
   border-radius: 8px;
   box-shadow: var(--box-shadow);
   transition:
@@ -55,7 +55,7 @@
     line-height: 2.5rem;
     transition: all 0.3s ease-in-out;
   }
-  &__month{
+  &__month {
     font-size: 1.3rem;
     font-weight: 700;
   }
@@ -77,5 +77,13 @@
   }
   &__link {
     color: var(--navy);
+  }
+} // --------------
+// MOBILE
+// ---------------
+
+@media screen and (max-width: 768px) {
+  .event-card {
+    width: 100%;
   }
 }

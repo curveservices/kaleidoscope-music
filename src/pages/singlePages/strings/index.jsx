@@ -51,6 +51,6 @@ const Strings = () => {
         (Horner)."
     />
   );
-}
+};
 
-export default Strings
+export default Strings;

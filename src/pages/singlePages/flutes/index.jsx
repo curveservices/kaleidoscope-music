@@ -1,6 +1,6 @@
 import hero from "../../../assets/images/flutes.jpg";
 import Beverley from "../../../assets/images/bev.jpg";
-import GroupSingle from '../../../components/groupSingle'
+import GroupSingle from "../../../components/groupSingle";
 
 const Flutes = () => {
   return (
@@ -43,6 +43,6 @@ const Flutes = () => {
         has both alto and bass flute parts which can be adapted."
     />
   );
-}
+};
 
-export default Flutes
+export default Flutes;

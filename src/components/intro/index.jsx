@@ -2,14 +2,7 @@ import "./index.scss";
 import FeatureCard from "../featureCards";
 import scope from "../../assets/images/small-kaleidoscope.png";
 
-const IntroSection = ({
-  eyebrow,
-  h2,
-  headingAccent,
-  p1,
-  p2,
-  features,
-}) => {
+const IntroSection = ({ eyebrow, h2, headingAccent, p1, p2, features }) => {
   return (
     <section className="intro-section">
       <div className="intro-section__container">

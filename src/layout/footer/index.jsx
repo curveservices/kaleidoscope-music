@@ -33,7 +33,9 @@ const Footer = () => {
           <div className="footer__contact">
             <p>Rochester, Kent</p>
             <a href="tel:+44 1795 522 738">01795 522 738</a>
-            <a href="mailto: music@fmerrifield.co.uk">music@merrifield.co.uk</a>
+            <a href="mailto: brian@quercusgraphics.co.uk">
+              brian@quercusgraphics.co.uk
+            </a>
           </div>
         </div>
 

@@ -1,6 +1,6 @@
 import hero from "../../../assets/images/clarinets.webp";
 import Beverley from "../../../assets/images/bev.jpg";
-import GroupSingle from '../../../components/groupSingle'
+import GroupSingle from "../../../components/groupSingle";
 
 const Clarinets = () => {
   return (
@@ -41,6 +41,6 @@ const Clarinets = () => {
         on the classical side but we sometimes jazz our pieces up !!"
     />
   );
-}
+};
 
-export default Clarinets
+export default Clarinets;

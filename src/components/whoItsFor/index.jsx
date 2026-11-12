@@ -4,7 +4,6 @@ import "./index.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const TargetCustomer = ({ eyebrow, heading, headingAccent, p, targets }) => {
-
   return (
     <section className="target-section">
       <div className="target-section__image">

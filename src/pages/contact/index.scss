@@ -1,0 +1,288 @@
+.contact-page {
+  .contact {
+    display: flex;
+    justify-content: space-evenly;
+    padding: var(--desktop-section);
+    .header span {
+      color: var(--violet);
+    }
+    &__details-container {
+      width: 80%;
+    }
+    &__detail {
+      display: flex;
+      gap: 2.5rem;
+      align-items: center;
+      margin-bottom: 2rem;
+      svg {
+        background-color: var(--pink);
+        font-size: 20px;
+        padding: 16px;
+        border-radius: 100%;
+        color: var(--ivory);
+      }
+      h4 {
+        font-size: 18px;
+        font-weight: 800;
+        color: var(--violet);
+      }
+      a {
+        color: var(--navy);
+        font-weight: 700;
+        &:hover {
+          color: var(--pink);
+        }
+      }
+    }
+    &__form-section {
+      width: 60%;
+    }
+    &__form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    &__form-row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+    &__form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      label {
+        font-family: var(--font-header);
+        font-size: 15px;
+        font-weight: 900;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: var(--pink);
+      }
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 15px 18px;
+        border: none;
+        border-radius: 8px;
+        outline: none;
+        color: var(--navy);
+        background: var(--ivory);
+        font-family: var(--font-body);
+        font-size: 18px;
+        letter-spacing: 0.15em;
+        box-shadow: var(--button);
+        transition: all 0.3s ease;
+        &:focus {
+          border-color: rgba(255, 192, 203, 1);
+          background: var(--ivory);
+          box-shadow: var(--button-hover);
+        }
+      }
+      textarea {
+        resize: vertical;
+        grid-column: span 2;
+        min-height: 150px;
+        width: 100%;
+      }
+    }
+    &__form-submit {
+      margin-top: 1rem;
+    }
+
+    // Decorative floating diamonds
+    &__diamond {
+      position: absolute;
+      z-index: -1;
+      width: 180px;
+      aspect-ratio: 1;
+      transform: rotate(45deg);
+      opacity: 0.3;
+      pointer-events: none;
+
+      &--pink {
+        top: 22%;
+        right: 0%;
+        background: var(--pink);
+      }
+
+      &--teal {
+        top: 35%;
+        left: 12%;
+        width: 100px;
+        background: var(--teal);
+      }
+
+      &--yellow {
+        top: 10%;
+        right: 15%;
+        width: 100px;
+        background: var(--yellow);
+      }
+
+      &--violet {
+        width: 350px;
+        right: 10%;
+        bottom: 15%;
+        background: var(--violet);
+      }
+
+      &--blue {
+        left: 0;
+        top: 10%;
+        background: var(--blue);
+      }
+    }
+  }
+}
+
+// ---------------
+// TABLET
+// ---------------
+
+@media screen and (min-width: 769px) and (max-width: 1032px) {
+  .contact-page {
+    .contact {
+      display: flex;
+      justify-content: space-between;
+      gap: 1.25rem;
+      padding: var(--tablet-section);
+
+      &__details-container {
+        width: initial;
+      }
+
+      &__detail {
+        margin-bottom: 3rem;
+      }
+
+      &__form-section {
+        width: 100%;
+      }
+
+      &__form-group {
+        label {
+          font-size: 14px;
+        }
+
+        input,
+        select,
+        textarea {
+          padding: 15px 16px;
+          font-size: 15px;
+        }
+      }
+
+      // Decorative floating diamonds
+      &__diamond {
+        width: 160px;
+
+        &--pink {
+          right: 3%;
+        }
+
+        &--teal {
+          width: 100px;
+        }
+
+        &--yellow {
+          width: 100px;
+        }
+
+        &--violet {
+          width: 350px;
+        }
+      }
+    }
+  }
+}
+
+// -------------
+// MOBILE
+// -------------
+
+@media screen and (max-width: 768px) {
+  .contact-page {
+    .contact {
+      flex-direction: column;
+      justify-content: space-between;
+      padding: var(--mobile-section);
+
+      &__details-container {
+        width: 100%;
+      }
+
+      &__detail {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+
+        svg {
+          z-index: -1;
+          font-size: 18px;
+          padding: 14px;
+        }
+
+        h4 {
+          font-size: 15px;
+        }
+      }
+
+      &__form-section {
+        width: initial;
+      }
+
+      &__form-group {
+        label {
+          font-size: 13px;
+          font-weight: 900;
+          letter-spacing: 0.2em;
+        }
+
+        input,
+        select,
+        textarea {
+          font-size: 12px;
+        }
+
+        textarea {
+          min-height: 120px;
+        }
+      }
+
+      // Decorative floating diamonds
+      &__diamond {
+        width: 80px;
+
+        &--pink {
+          top: 19%;
+          right: 5%;
+        }
+
+        &--teal {
+          top: 30%;
+          left: -5%;
+          width: 120px;
+        }
+
+        &--yellow {
+          width: 100px;
+        }
+
+        &--violet {
+          width: 250px;
+          right: 15%;
+          bottom: 15%;
+          background: var(--violet);
+        }
+
+        &--blue {
+          left: 0;
+          top: 10%;
+          background: var(--blue);
+        }
+      }
+    }
+  }
+}

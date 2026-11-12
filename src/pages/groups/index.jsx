@@ -10,8 +10,8 @@ import "./index.scss";
 const Groups = () => {
   const FadeInSection = ({ children }) => {
     useScrollState();
-    return <div className="fade-in-on-scroll">{children}</div>
-  }
+    return <div className="fade-in-on-scroll">{children}</div>;
+  };
   return (
     <div className="groups-page">
       <SmallHero
@@ -21,7 +21,7 @@ const Groups = () => {
         h1c="Community"
         p="We have a range of ensembles and group, so there's a place for everyone - no auditions, 
         just a shared love of music."
-        button1Link="/contact-us"
+        button1Link="/contact-us/#join-us"
         button1Text="Join us"
         button2Link="/events"
         button2Text="Live events"
@@ -35,6 +35,6 @@ const Groups = () => {
       </FadeInSection>
     </div>
   );
-}
+};
 
-export default Groups
+export default Groups;

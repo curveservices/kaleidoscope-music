@@ -30,8 +30,8 @@ const About = () => {
       title: "Rehearsals",
       description:
         "We rehearse on Monday evenings during term time at Rochester Girls Grammar School. Rehearsals are between 6.30pm and 9.30pm depending on which group(s) you play in. At 8.00pm we have a 15 minute tea break which allows us to socialise with members of the various groups.",
-          color: "var(--pink)",
-      display: "none"
+      color: "var(--pink)",
+      display: "none",
     },
     {
       id: 2,
@@ -51,16 +51,17 @@ const About = () => {
       description:
         "There are no auditions and we are always ready to welcome new players. So if you are looking to join an ensemble or orchestra, can read music and play to a reasonable standard then why not come along and give us a try. You will be made very welcome.",
       color: "var(--violet)",
-    display: "none"
+      display: "none",
     },
     {
       id: 4,
       number: "04",
       icon: faCalendar,
       title: "Concerts & events",
-      description: "We have a concert at the end of each term when friends and family are invited along to hear what we have been rehearsing. We also play at outside events in support of the local community. but there is no pressure to play at any of our concerts if you prefer not to.",
+      description:
+        "We have a concert at the end of each term when friends and family are invited along to hear what we have been rehearsing. We also play at outside events in support of the local community. but there is no pressure to play at any of our concerts if you prefer not to.",
       color: "var(--yellow)",
-      display: "none"
+      display: "none",
     },
   ];
 
@@ -77,7 +78,7 @@ const About = () => {
         button1Text="Find your group"
         button1Link="/groups"
         button2Text="Contact us"
-        button2Link="/contact"
+        button2Link="/contact-us"
       />
       <FadeInSection>
         <section className="about-page__intro">
@@ -144,7 +145,7 @@ const About = () => {
         />
       </FadeInSection>
       <FadeInSection>
-        <Testimonials/>
+        <Testimonials />
       </FadeInSection>
     </div>
   );

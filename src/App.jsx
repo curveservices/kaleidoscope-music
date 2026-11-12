@@ -20,8 +20,11 @@ const Orchestra = lazy(() => import("./pages/singlePages/orchestra/index.jsx"));
 const Strings = lazy(() => import("./pages/singlePages/strings/index.jsx"));
 const Flutes = lazy(() => import("./pages/singlePages/flutes/index.jsx"));
 const Clarinets = lazy(() => import("./pages/singlePages/clarinet/index.jsx"));
-const Saxophones = lazy(() => import("./pages/singlePages/saxophone/index.jsx"));
+const Saxophones = lazy(
+  () => import("./pages/singlePages/saxophone/index.jsx"),
+);
 const Mosaic = lazy(() => import("./pages/singlePages/mosaic/index.jsx"));
+const Contact = lazy(() => import("./pages/contact/index.jsx"));
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -106,7 +109,15 @@ const router = createBrowserRouter(
               <Mosaic />
             </Suspense>
           }
-        /> 
+        />
+        <Route
+          path="/contact-us"
+          element={
+            <Suspense fallback={<LoadingSpinner />}>
+              <Contact />
+            </Suspense>
+          }
+        />
       </Route>
 
       <Route

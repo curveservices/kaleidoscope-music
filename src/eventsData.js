@@ -1,7 +1,4 @@
-import {
-  faClock,
-  faMapLocation,
-} from "@fortawesome/free-solid-svg-icons";
+import { faClock, faMapLocation } from "@fortawesome/free-solid-svg-icons";
 import e1 from "./assets/images/christmas.jpg";
 import e2 from "./assets/images/christmas.jpg";
 import e3 from "./assets/images/people.webp";
@@ -20,7 +17,8 @@ export const events = [
     locIcon: faMapLocation,
     location: "Rochester Grammar School",
     color: "var(--pink)",
-    content: "We end our autumn term with a Christmassy concert, and of course Xmas jumpers and hats are a must! Lots of Xmas favourites will be performed."
+    content:
+      "We end our autumn term with a Christmassy concert, and of course Xmas jumpers and hats are a must! Lots of Xmas favourites will be performed.",
   },
   {
     id: "winter-concert",
@@ -35,7 +33,8 @@ export const events = [
     locIcon: faMapLocation,
     location: "St Augustine's",
     color: "var(--teal)",
-    content: "Playing Carol's at St Augustine's Christmas 🎄 Festival, followed by tea and cake."
+    content:
+      "Playing Carol's at St Augustine's Christmas 🎄 Festival, followed by tea and cake.",
   },
   {
     id: "spring-conert",
@@ -49,14 +48,15 @@ export const events = [
     time: "7:15pm",
     locIcon: faMapLocation,
     location: "Rochester Grammar School",
-    color:"var(--yellow)",
-    content: "As we come to the end of our Spring term, we are looking forward to our end of term concert. The concert starts at 7:15 please come along to hear our various groups."
+    color: "var(--yellow)",
+    content:
+      "As we come to the end of our Spring term, we are looking forward to our end of term concert. The concert starts at 7:15 please come along to hear our various groups.",
   },
-    {
+  {
     id: 6,
     month: "JUL",
     type: "Festival",
-    day: "SAT" ,
+    day: "SAT",
     date: 28,
     img: e4,
     title: "Summer Music Festival",
@@ -65,7 +65,8 @@ export const events = [
     locIcon: faMapLocation,
     location: "Balmoral Gardens, Gillingham",
     color: "var(--pink)",
-    content: "Join us for a busy weekend with the Orchestra playing at the Music festival in Balmoral Gardens, Gillingham"
+    content:
+      "Join us for a busy weekend with the Orchestra playing at the Music festival in Balmoral Gardens, Gillingham",
   },
   {
     id: 4,
@@ -79,6 +80,7 @@ export const events = [
     locIcon: faMapLocation,
     location: "Rochester Grammar School",
     color: "var(--teal)",
-    content: "Celebrate with us for the end of term summer concert.  Come along to listen to some lovely music on a summers evening. Everyone welcome. "
+    content:
+      "Celebrate with us for the end of term summer concert.  Come along to listen to some lovely music on a summers evening. Everyone welcome. ",
   },
 ];

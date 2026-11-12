@@ -20,7 +20,7 @@
     margin: 0rem auto 0;
     width: 650px;
     height: 650px;
-    
+
     background-color: var(--navy);
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
     animation: fadeIn 0.4s 0.4s backwards;
@@ -46,7 +46,7 @@
     width: 180px;
     height: 180px;
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-   
+
     transition: transform 0.6s ease;
     animation: fadeIn 0.4s 0.5s backwards;
   }
@@ -148,7 +148,6 @@
     margin: 1rem 0 1rem;
     max-width: 600px;
     color: var(--ivory);
-    
   }
   p {
     margin: 0.5rem 0;
@@ -156,7 +155,7 @@
     &:nth-of-type(1) {
       animation-delay: 0.8s;
     }
-  
+
     &:nth-of-type(2) {
       animation-delay: 1s;
     }
@@ -183,7 +182,6 @@
 
 @media screen and (min-width: 769px) and (max-width: 1032px) {
   .small-hero {
-
     // =============================
     // IMAGE
     // =============================
@@ -221,11 +219,13 @@
     }
 
     &__image-overlay {
-      background: linear-gradient(55deg,
-          rgba(14, 26, 43, 1) 0%,
-          rgba(14, 26, 43, 0.48) 35%,
-          rgba(14, 26, 43, 0.18) 70%,
-          rgba(14, 26, 43, 0.08) 100%);
+      background: linear-gradient(
+        55deg,
+        rgba(14, 26, 43, 1) 0%,
+        rgba(14, 26, 43, 0.48) 35%,
+        rgba(14, 26, 43, 0.18) 70%,
+        rgba(14, 26, 43, 0.08) 100%
+      );
     }
 
     &__content {
@@ -248,85 +248,86 @@
 
 @media screen and (max-width: 768px) {
   .small-hero {
-  
-      // =============================
-      // IMAGE
-      // =============================
-  
-      &__image {
-        top: initial;
-        bottom: 0;
-        right: 0;
-        width: 400px;
-        height: 400px;
-      }
-  
-      // ----------------------------------------
-      // DECORATIVE SHAPES
-      // ----------------------------------------
-      .shape--pink {
-        top: 57%;
-        right:initial;
-        left: 3%;
-        width: 100px;
-        height: 100px;
-      }
+    // =============================
+    // IMAGE
+    // =============================
 
-      .shape--teal {
-        top: 56%;
-        right: 14%;
-        width: 80px;
-        height: 80px;
-      }
+    &__image {
+      top: initial;
+      bottom: 0;
+      right: 0;
+      width: 400px;
+      height: 400px;
+    }
 
-      .shape--yellow {
-        right: initial;
-        left: -15%;
-        bottom: -5%;
-        width: 200px;
-        height: 200px;
-      }
+    // ----------------------------------------
+    // DECORATIVE SHAPES
+    // ----------------------------------------
+    .shape--pink {
+      top: 57%;
+      right: initial;
+      left: 3%;
+      width: 100px;
+      height: 100px;
+    }
 
-      .shape--violet {
-        bottom: 5%;
-        right: -10%;
-        width: 135px;
-        height: 135px;
-      }
+    .shape--teal {
+      top: 56%;
+      right: 14%;
+      width: 80px;
+      height: 80px;
+    }
 
-      .shape--blue {
-        bottom: 0;
-        right: 15%;
-        width: 90px;
-        height: 90px;
-        background: var(--blue);
-        opacity: 0.95;
-      }
-  
-      &__image-overlay {
-        background: linear-gradient(55deg,
-            rgba(14, 26, 43, 1) 0%,
-            rgba(14, 26, 43, 0.28) 35%,
-            rgba(14, 26, 43, 0.18) 70%,
-            rgba(14, 26, 43, 0.08) 100%);
-      }
-  
-      &__content {
-        margin-top: 3rem;
-        padding: 70px 24px;
-      }
-  
-      // ==============================
-      // HEADING
-      // ==============================
-  
-      &__btn-container {
-        gap: 1.5rem;
-      }
-      ul {
-        li {
-          font-size: 11px;
-        }
+    .shape--yellow {
+      right: initial;
+      left: -15%;
+      bottom: -5%;
+      width: 200px;
+      height: 200px;
+    }
+
+    .shape--violet {
+      bottom: 5%;
+      right: -10%;
+      width: 135px;
+      height: 135px;
+    }
+
+    .shape--blue {
+      bottom: 0;
+      right: 15%;
+      width: 90px;
+      height: 90px;
+      background: var(--blue);
+      opacity: 0.95;
+    }
+
+    &__image-overlay {
+      background: linear-gradient(
+        55deg,
+        rgba(14, 26, 43, 1) 0%,
+        rgba(14, 26, 43, 0.28) 35%,
+        rgba(14, 26, 43, 0.18) 70%,
+        rgba(14, 26, 43, 0.08) 100%
+      );
+    }
+
+    &__content {
+      margin-top: 3rem;
+      padding: 70px 24px;
+    }
+
+    // ==============================
+    // HEADING
+    // ==============================
+
+    &__btn-container {
+      gap: 1.5rem;
+    }
+    ul {
+      li {
+        font-size: 11px;
       }
     }
+  }
 }

@@ -4,7 +4,6 @@ import { events } from "../../eventsData";
 import MainEventCard from "../../components/eventCardMain";
 import "./index.scss";
 
-
 const Events = () => {
   return (
     <div className="events-page">
@@ -17,7 +16,7 @@ const Events = () => {
         h1c="Groups"
         p="From our termly concerts to community performances, Find out what's coming up at Kaleidoscope Music."
         button1Text="Join Us"
-        button1Link="/about-us/#join-us"
+        button1Link="/contact-us/#join-us"
         button2Text="Our Groups"
         button2Link="/groups"
       />
@@ -45,6 +44,6 @@ const Events = () => {
       </section>
     </div>
   );
-}
+};
 
-export default Events
+export default Events;

@@ -18,7 +18,7 @@
   .events-page,
   .groups-page,
   .contact-page,
-  .group-page{
+  .group-page {
     animation: fadeIn 0.3s forwards;
     h1 {
       margin: 0;
@@ -124,7 +124,7 @@
   bottom: 6rem;
   left: 1.2rem;
   padding: 10px;
-  background: linear-gradient(135deg, #DF3393, #fe724f);
+  background: linear-gradient(135deg, #df3393, #fe724f);
   color: var(--ivory);
   font-size: 0.9rem;
   letter-spacing: 2px;
@@ -183,7 +183,9 @@
   }
 
   .back-to-top {
-    bottom: 10rem;
+    bottom: 5rem;
+    right: 5%;
+    left: initial;
     font-size: 13px;
     padding: 0.75rem 1rem;
   }

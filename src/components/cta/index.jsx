@@ -22,11 +22,15 @@ const CTA = () => {
       </div>
       <div className="cta__btn-container">
         <Button
-          text="Get in Touch"
-          link="/contact-us"
+          text="Join Us"
+          link="/contact-us/#join-us"
           background="var(--pink)"
         />
-        <Button text="Find your group" link="/groups" background="var(--navy)" />
+        <Button
+          text="Find your group"
+          link="/groups"
+          background="var(--navy)"
+        />
       </div>
     </section>
   );

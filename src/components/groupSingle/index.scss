@@ -1,145 +1,143 @@
 .group-page {
-    &__more-info {
-        &__container {
-            display: flex;
-            align-items: flex-start;
-            justify-content: space-between;
-            gap: 2rem;
-            padding: 100px 64px;
-        }
-
-        &__container-cards {
-            display: flex;
-            justify-content: space-between;
-            gap: 2rem;
-            margin-top: 1rem;
-            .feature-card {
-                width: 300px;
-            }
-        }
+  &__more-info {
+    &__container {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 2rem;
+      padding: var(--desktop-section);
     }
+
+    &__container-cards {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      margin-top: 1rem;
+      .feature-card {
+        width: 300px;
+      }
+    }
+  }
 }
 // ----------------------------------------
 // TABLET
 // ----------------------------------------
-@media screen and (min-width: 769px) and (max-width:1032px) {
-    .group-page {
-        .text-image {
-            &__container {
-                flex-direction: column;
-                gap: 2rem;
-            }
-            &__background {
-                // ----------------------------------------
-                // DECORATIVE SHAPES
-                // ----------------------------------------
-                .shape {
-    
-                    &--pink {
-                        top: 7%;
-                        left: 43%;
-                    }
-    
-                    &--teal {
-                        top: 5%;
-                        right: 22%;
-                        left: initial;
-                    }
-    
-                    &--yellow {
-                        top: 30%;
-                        left: 28%;
-                    }
-    
-                    &--violet {
-                        left: initial;
-                        top: 30%;
-                        right: 3%;
-                    }
-    
-                    &--blue {
-                        left: initial;
-                        right: 17%;
-                        top: 40%;
-                    }
-                }
-            }
+@media screen and (min-width: 769px) and (max-width: 1032px) {
+  .group-page {
+    .text-image {
+      &__container {
+        flex-direction: column;
+        gap: 2rem;
+      }
+      &__background {
+        // ----------------------------------------
+        // DECORATIVE SHAPES
+        // ----------------------------------------
+        .shape {
+          &--pink {
+            top: 7%;
+            left: 43%;
+          }
+
+          &--teal {
+            top: 5%;
+            right: 22%;
+            left: initial;
+          }
+
+          &--yellow {
+            top: 30%;
+            left: 28%;
+          }
+
+          &--violet {
+            left: initial;
+            top: 30%;
+            right: 3%;
+          }
+
+          &--blue {
+            left: initial;
+            right: 17%;
+            top: 40%;
+          }
         }
-        &__more-info {
-            &__container {
-                flex-direction: column;
-            }
-            &__container-cards {
-                align-self: center;
-            }
-        }
+      }
     }
+    &__more-info {
+      &__container {
+        flex-direction: column;
+      }
+      &__container-cards {
+        align-self: center;
+      }
+    }
+  }
 }
 
 // ----------------------------------------
 // MOBILE
 // ----------------------------------------
 @media screen and (max-width: 768px) {
-    .group-page {
-        .text-image {
-            &__container {
-                flex-direction: column;
-                gap:2rem;
-            }
-            &__background {
-            // ----------------------------------------
-            // DECORATIVE SHAPES
-            // ----------------------------------------
-            .shape {
+  .group-page {
+    .text-image {
+      &__container {
+        flex-direction: column;
+        gap: 2rem;
+      }
+      &__background {
+        // ----------------------------------------
+        // DECORATIVE SHAPES
+        // ----------------------------------------
+        .shape {
+          &--pink {
+            width: 50px;
+            top: 7%;
+            left: 27%;
+          }
 
-                &--pink {
-                    width: 50px;
-                    top: 7%;
-                    left: 27%;
-                }
+          &--teal {
+            top: 5%;
+            right: 25%;
+            left: initial;
+            width: 60px;
+          }
 
-                &--teal {
-                    top: 5%;
-                    right: 25%;
-                    left: initial;
-                    width: 60px;
-                }
+          &--yellow {
+            width: 80px;
+            top: 18%;
+            left: 24%;
+          }
 
-                &--yellow {
-                    width: 80px;
-                    top: 18%;
-                    left: 24%;
-                }
+          &--violet {
+            width: 90px;
+            left: initial;
+            top: 16%;
+            right: 10%;
+          }
 
-                &--violet {
-                    width: 90px;
-                    left: initial;
-                    top: 16%;
-                    right: 10%;
-                }
-
-                &--blue {
-                    width: 40px;
-                    left: initial;
-                    right: 30%;
-                    top: 22%;
-                    background: var(--blue);
-                }
-            }
+          &--blue {
+            width: 40px;
+            left: initial;
+            right: 30%;
+            top: 22%;
+            background: var(--blue);
+          }
         }
-        }
-        &__more-info {
-            &__container {
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                padding: 0px 24px 48px;
-            }
-            &__container-cards {
-                flex-direction: column;
-                gap: 2rem;
-                margin-top: 1rem;           
-            }
-        }
+      }
     }
-}       
+    &__more-info {
+      &__container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0px 24px 48px;
+      }
+      &__container-cards {
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 1rem;
+      }
+    }
+  }
+}

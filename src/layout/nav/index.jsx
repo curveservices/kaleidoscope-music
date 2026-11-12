@@ -10,7 +10,6 @@ import {
   faEnvelope,
   faEnvelopeOpen,
   faHouse,
-  faImage,
   faInfoCircle,
   faPhone,
   faUsers,
@@ -107,14 +106,18 @@ const Navbar = () => {
             </div>
             <div className="mobile-icon text small menu-container">
               <FontAwesomeIcon icon={faEnvelopeOpen} />
-              kaleidoscope@email.com
+              brian@quercusgraphics.co.uk
             </div>
             <div className="mobile-icon text small menu-container">
               <FontAwesomeIcon icon={faPhone} /> 07777 888 999
             </div>
           </div>
         </nav>
-        <Button text="Join Us" link="/contact-us" background="var(--pink)" />
+        <Button
+          text="Join Us"
+          link="/contact-us/#join-us"
+          background="var(--pink)"
+        />
         <MenuToggle showNav={showNav} setShowNav={setShowNav} />
       </header>
     </>

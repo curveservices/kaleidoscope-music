@@ -2,16 +2,16 @@ import Button from "../button";
 import "./index.scss";
 
 const TextImage = ({
-    eyebrow,
-    h2,
-    headingAccent,
-    color,
-    p1,
-    p2,
-    src,
-    buttonText,
-    buttonLink,
-    buttonColor
+  eyebrow,
+  h2,
+  headingAccent,
+  color,
+  p1,
+  p2,
+  src,
+  buttonText,
+  buttonLink,
+  buttonColor,
 }) => {
   return (
     <section className="text-image">
@@ -33,11 +33,16 @@ const TextImage = ({
           </h2>
           <p>{p1}</p>
           <p>{p2}</p>
-          <Button text={buttonText} link={buttonLink} background={buttonColor} display />
+          <Button
+            text={buttonText}
+            link={buttonLink}
+            background={buttonColor}
+            display
+          />
         </div>
       </div>
     </section>
   );
-}
+};
 
 export default TextImage;

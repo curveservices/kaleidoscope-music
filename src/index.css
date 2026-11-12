@@ -1,29 +1,29 @@
 :root {
   --navy: #182c42;
   --ivory: #f8f6f0;
-  --pink: #DF3393;
-  --teal: #4FC2C3;
-  --yellow: #E9C91D;
+  --pink: #df3393;
+  --teal: #4fc2c3;
+  --yellow: #e9c91d;
   --violet: #874bb5;
   --blue: #3131e6;
   --section: #eef7f6;
-  --button:linear-gradient(135deg, #DF3393, #fe724f);
+  --button: linear-gradient(135deg, #df3393, #fe724f);
 
+  /* FONT STYLING*/
   --font-heading: "Outfit", sans-serif;
   --font-body: "Inter", sans-serif;
 
+  /* SHADOW STYLING */
   --button-hover: inset 0 2px 4px #0004;
   --button-shadow: 2px 6px 12px rgba(0, 0, 0, 0.5);
   /* --button-hover: 0 15px 20px rgba(24, 44, 66, 0.38); */
   --box-shadow: 2px 12px 25px rgba(0, 0, 0, 0.3);
   --box-shadow-hover: 0 20px 40px rgba(24, 44, 66, 0.15);
-  --button: 
-    inset 0 1.2px 0 #ffffff59,
-    inset 0 -2px 0 #0003,
-    0 1px 6px #0006,
+  --button:
+    inset 0 1.2px 0 #ffffff59, inset 0 -2px 0 #0003, 0 1px 6px #0006,
     0 8px 24px -6px #f05ba353;
-  
-/* PADDING */
+
+  /* PADDING */
   --desktop-section: 100px 64px 64px;
   --mobile-section: 64px 24px;
   --tablet-section: 64px;
@@ -66,7 +66,6 @@ body {
 }
 
 a {
-  color: var(--ivory);
   text-decoration: none;
 }
 
