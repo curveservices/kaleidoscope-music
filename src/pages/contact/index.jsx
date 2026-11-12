@@ -1,7 +1,7 @@
 import SmallHero from "../../components/heroSmall";
 import TextImage from "../../components/textImage";
 import hero from "../../assets/images/sax1.jpeg";
-import groups from "../../assets/images/julie.jpeg";
+import groups from "../../assets/images/julie.JPEG";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faEnvelope,
