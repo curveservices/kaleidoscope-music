@@ -172,7 +172,7 @@ const Contact = () => {
                 </div>
                 <div className="contact__form-submit">
                   <Button
-                    text="Apply to Join"
+                    text="Send"
                     background="var(--pink)"
                     color="var(--ivory)"
                   />
