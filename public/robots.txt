@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /about-us
+Allow: /events
+Allow: /groups
+Allow: /contact-us
+Allow: /community-orchestra
+Allow: /string-ensemble
+Allow: /flute-choir
+Allow: /clarinet-choir
+Allow: /saxophone-choir
+Allow: /mosaic-sounds
+
