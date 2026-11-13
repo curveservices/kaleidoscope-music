@@ -5,7 +5,9 @@ import Helmet from "../../components/helmet";
 import CTA from "../../components/cta";
 import GroupsGrid from "../../components/groupsGrids";
 import { groups } from "../../groupsData";
+import EventsPreview from "../../components/eventsPreview";
 import "./index.scss";
+import Testimonials from "../../components/testimonials";
 
 const Groups = () => {
   const FadeInSection = ({ children }) => {
@@ -59,6 +61,12 @@ const Groups = () => {
         />
         <FadeInSection>
           <GroupsGrid groups={groups} />
+        </FadeInSection>
+        <FadeInSection>
+          <EventsPreview/>
+        </FadeInSection>
+        <FadeInSection>
+          <Testimonials />
         </FadeInSection>
         <FadeInSection>
           <CTA />

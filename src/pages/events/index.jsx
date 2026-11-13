@@ -3,9 +3,15 @@ import hero from "../../assets/images/people.webp";
 import { events } from "../../eventsData";
 import MainEventCard from "../../components/eventCardMain";
 import Helmet from "../../components/helmet";
+import useScrollState from "../../components/scrollState";
 import "./index.scss";
+import CTA from "../../components/cta";
 
 const Events = () => {
+  const FadeInSection = ({ children }) => {
+    useScrollState();
+    return <div className="fade-in-on-scroll">{children}</div>;
+  };
   return (
     <>
       <Helmet
@@ -51,28 +57,33 @@ const Events = () => {
           button2Text="Our Groups"
           button2Link="/groups"
         />
-        <section className="events">
-          <div className="events__intro-container">
-            <div className="header">
-              <div className="eyebrow">Upcoming events</div>
-              <h2>
-                Concerts, Performances
-                <span className="header-accent">And More...</span>
-              </h2>
+        <FadeInSection>
+          <section className="events">
+            <div className="events__intro-container">
+              <div className="header">
+                <div className="eyebrow">Upcoming events</div>
+                <h2>
+                  Concerts, Performances
+                  <span className="header-accent">And More...</span>
+                </h2>
+              </div>
+              <hr />
+              <p>
+                Join us for our upcoming concerts and events. There's something
+                for everyone, whether you're playing, listening, or just
+                supporting our community.
+              </p>
             </div>
-            <hr />
-            <p>
-              Join us for our upcoming concerts and events. There's something
-              for everyone, whether you're playing, listening, or just
-              supporting our community.
-            </p>
-          </div>
-          <div className="events__card-grid">
-            {events.map((event) => (
-              <MainEventCard key={event.id} {...event} />
-            ))}
-          </div>
-        </section>
+            <div className="events__card-grid">
+              {events.map((event) => (
+                <MainEventCard key={event.id} {...event} />
+              ))}
+            </div>
+          </section>
+        </FadeInSection>
+        <FadeInSection>
+          <CTA />
+        </FadeInSection>
       </div>
     </>
   );
