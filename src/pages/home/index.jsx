@@ -116,7 +116,7 @@ const Home = () => {
           heading="Not played for a while?"
           headingAccent="That's OK."
           p="You don't have to be an expert to join Kaleidoscope.
-            We welcome beginners, returning musicians and experienced players alike, with a range of groups offering
+            We welcome returning musicians, inexperienced and experienced players alike, with a range of groups offering
             different levels of challenges"
           targets={homeTargets}
         />

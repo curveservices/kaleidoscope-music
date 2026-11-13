@@ -108,7 +108,7 @@ const Contact = () => {
           </div>
           <div className="contact__form-section" id="join-us">
             <div className="header">
-              <div className="eyebrow">Apply to join us</div>
+              <div className="eyebrow">Contact us</div>
               <h2>
                 We'll get back
                 <span>to you soon</span>

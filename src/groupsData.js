@@ -23,8 +23,8 @@ export const groups = [
     href: "/community-orchestra",
   },
   {
-    id: "string-orchestra",
-    title: "String Orchestra",
+    id: "string-ensemble",
+    title: "String Ensemble",
     description:
       "Play alongside other string musicians and develop your ensemble playing.",
     icon: faShoelace,
@@ -65,7 +65,7 @@ export const groups = [
     id: "mosaic-sounds",
     title: "Mosaic Sounds",
     description:
-      "Play, learn and develop your guitar skills alongside other musicians.",
+      "Play, learn and develop your musical skills alongside other musicians.",
     icon: faGuitar,
     colour: "var(--violet)",
     image: mosaic,

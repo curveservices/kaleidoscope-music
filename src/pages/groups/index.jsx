@@ -16,7 +16,7 @@ const Groups = () => {
     <div className="groups-page">
       <SmallHero
         eyebrow="Our Groups"
-        h1="Different Instraments."
+        h1="Different Instruments."
         h1b="One"
         h1c="Community"
         p="We have a range of ensembles and group, so there's a place for everyone - no auditions, 

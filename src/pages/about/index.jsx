@@ -73,7 +73,7 @@ const About = () => {
         h1a="More"
         h1b="Than"
         h1c="Music."
-        p="We are a community music organisation based in Rochester, Kent. We run a range of music groups for people of all ages and abilities, bringing people together through the power of music."
+        p="We are a community music organisation based in Rochester, Kent. We run a range of music groups for adults with all abilities, bringing people together through the power of music."
         eyebrow="about Kaleidoscope"
         button1Text="Find your group"
         button1Link="/groups"
