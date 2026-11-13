@@ -71,7 +71,7 @@ const router = createBrowserRouter(
           }
         />
         <Route
-          path="/string-orchestra"
+          path="/string-ensemble"
           element={
             <Suspense fallback={<LoadingSpinner />}>
               <Strings />

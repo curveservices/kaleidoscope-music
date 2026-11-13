@@ -30,7 +30,7 @@ export const groups = [
     icon: faShoelace,
     colour: "var(--pink)",
     image: strings,
-    href: "/string-orchestra",
+    href: "/string-ensemble",
   },
   {
     id: "flute-choir",

@@ -15,8 +15,9 @@ import {
   faStarHalfStroke,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
-import "./index.scss";
 import Testimonial from "../../components/testimonials/index.jsx";
+import Helmet from "../../components/helmet";
+import "./index.scss";
 
 const Home = () => {
   const FadeInSection = ({ children }) => {
@@ -79,58 +80,88 @@ const Home = () => {
     },
   ];
   return (
-    <div className="home-page">
-      <Hero
-        src={home}
-        h1="Make Music."
-        h1a="Make"
-        h1b="New"
-        h1c="Friends."
-        p="Join a friendly community of musicians in Rochester, Kent - from beginners and returning players to experienced musicians"
-        p1="A range of groups to choose from, including the Kaleidoscope Community Orchestra"
-        eyebrow="Kaleidoscope music groups"
-        button1Text="Find your group"
-        button1Link="/groups"
-        button2Text="Join Us"
-        button2Link="/contact-us/#join-us"
+    <>
+      <Helmet
+        title="Kaleidoscope Music | Music Groups in Kent"
+        description="Kaleidoscope is a friendly community of musicians in Rochester, Kent - from returning players to inexperienced and experienced musicians."
+        keywords="learn music, music, Kent, music groups, Rochester Kent, Kaleidoscope music groups"
+        schemaMarkup={{
+          "@context": "https://schema.org",
+          "@type": "MusicGroup",
+          name: "Kaleidoscope Music",
+          description:
+            "Kaleidoscope is a friendly community of musicians in Rochester, Kent - from returning players to inexperienced and experienced musicians.",
+          url: "https://www.kaleidoscopemusic.org.uk/",
+          sameAs: [
+            "https://www.facebook.com/KaleidoscopeCreativeArts/",
+            "https://www.instagram.com/hdproductionsltd/",
+          ],
+          image: [
+            "https://www.kaleidoscopemusic.org.uk/assets/images/home.jpg",
+          ],
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "Kent",
+            addressRegion: "South East England",
+            addressCountry: "United Kingdom",
+          },
+          telephone: "+44 1795 522 738",
+          email: "brian@quercusgraphics.co.uk",
+        }}
       />
-      <FadeInSection>
-        <IntroSection
-          eyebrow="MORE THAN MUSIC"
-          h2="Music brings"
-          headingAccent="us together"
-          p1="Kaleidoscope music groups brings musicians together to play, learn, improve and enjoy music as part of a community."
-          p2="Whether you're picking up your instrument for the first time, returning after years away or looking for a more challenging ensemble, there's a place for you here. "
-          features={introFeatures}
+      <div className="home-page">
+        <Hero
+          src={home}
+          h1="Make Music."
+          h1a="Make"
+          h1b="New"
+          h1c="Friends."
+          p="Join a friendly community of musicians in Rochester, Kent - from returning players to inexperienced and experienced musicians."
+          p1="A range of groups to choose from, including the Kaleidoscope Community Orchestra."
+          eyebrow="Kaleidoscope music groups"
+          button1Text="Find your group"
+          button1Link="/groups"
+          button2Text="Join Us"
+          button2Link="/contact-us/#join-us"
         />
-      </FadeInSection>
-      <FadeInSection>
-        <GroupsGrid
-          p1="From full orchestras and string ensembles to smaller groups, there's plenty of ways to make music together."
-          groups={groups}
-        />
-      </FadeInSection>
-      <FadeInSection>
-        <TargetCustomer
-          eyebrow="all abilities welcome"
-          heading="Not played for a while?"
-          headingAccent="That's OK."
-          p="You don't have to be an expert to join Kaleidoscope.
+        <FadeInSection>
+          <IntroSection
+            eyebrow="MORE THAN MUSIC"
+            h2="Music brings"
+            headingAccent="us together"
+            p1="Kaleidoscope music groups brings musicians together to play, learn, improve and enjoy music as part of a community."
+            p2="Whether you're picking up your instrument for the first time, returning after years away or looking for a more challenging ensemble, there's a place for you here. "
+            features={introFeatures}
+          />
+        </FadeInSection>
+        <FadeInSection>
+          <GroupsGrid
+            p1="From full orchestras and string ensembles to smaller groups, there's plenty of ways to make music together."
+            groups={groups}
+          />
+        </FadeInSection>
+        <FadeInSection>
+          <TargetCustomer
+            eyebrow="all abilities welcome"
+            heading="Not played for a while?"
+            headingAccent="That's OK."
+            p="You don't have to be an expert to join Kaleidoscope.
             We welcome returning musicians, inexperienced and experienced players alike, with a range of groups offering
             different levels of challenges"
-          targets={homeTargets}
-        />
-      </FadeInSection>
-      <FadeInSection>
-        <EventsPreview />
-      </FadeInSection>
-      <FadeInSection>
-        <Testimonial />
-      </FadeInSection>
-      <FadeInSection>
-        <CTA />
-      </FadeInSection>
-    </div>
+            targets={homeTargets}
+          />
+        </FadeInSection>
+        <FadeInSection>
+          <EventsPreview />
+        </FadeInSection>
+        <FadeInSection>
+          <Testimonial />
+        </FadeInSection>
+        <FadeInSection>
+          <CTA />
+        </FadeInSection>
+      </div>
+    </>
   );
 };
 

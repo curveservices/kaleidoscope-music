@@ -4,6 +4,9 @@ import julie from "../../../assets/images/julie.JPEG";
 const Strings = () => {
   return (
     <GroupSingle
+      title="String Ensemble | Kaleidoscope Music Groups"
+      description="The string ensemble is conducted by Julie Moore, who has been with us for 18 years."
+      url="https://www.kaleidoscopemusic.org.uk/string-ensemble"
       src={hero}
       HeroEyebrow="The Strings"
       HeroH1="Kaleidoscope"

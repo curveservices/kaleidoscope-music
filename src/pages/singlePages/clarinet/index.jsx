@@ -5,6 +5,9 @@ import GroupSingle from "../../../components/groupSingle";
 const Clarinets = () => {
   return (
     <GroupSingle
+      title="Clarinet Choir | Kaleidoscope Music Groups"
+      description="Our Woodwind groups are led by Beverley Prankard. The woodwind groups have all thrived under Beverley’s inspired leadership and offer an enjoyable way of making music with like minded people."
+      url="https://www.kaleidoscopemusic.org.uk/clarinet-choir"
       src={hero}
       HeroEyebrow="The Clarinet Choir"
       HeroH1="Kaleidoscope"

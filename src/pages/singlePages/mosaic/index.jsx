@@ -4,6 +4,9 @@ import GroupSingle from "../../../components/groupSingle";
 const Mosaic = () => {
   return (
     <GroupSingle
+      title="Mosaic Sounds | Kaleidoscope Music Groups"
+      description="Mosaic Sounds are a small group of instrumentalists. The group is led by highly experienced Bassoon player Karen."
+      url="https://www.kaleidoscopemusic.org.uk/mosaic-sounds"
       src={hero}
       HeroEyebrow="Mosaic Sounds"
       HeroH1="Kaleidoscope"

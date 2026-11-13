@@ -1,4 +1,3 @@
-import "./index.scss";
 import about from "../../assets/images/flutes.webp";
 import people from "../../assets/images/people.webp";
 import SmallHero from "../../components/heroSmall";
@@ -16,6 +15,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import TextImage from "../../components/textImage";
 import Testimonials from "../../components/testimonials";
+import Helmet from "../../components/helmet";
+import "./index.scss";
 
 const About = () => {
   const FadeInSection = ({ children }) => {
@@ -66,88 +67,122 @@ const About = () => {
   ];
 
   return (
-    <div className="about-page">
-      <SmallHero
-        src={about}
-        h1="About Us."
-        h1a="More"
-        h1b="Than"
-        h1c="Music."
-        p="We are a community music organisation based in Rochester, Kent. We run a range of music groups for adults with all abilities, bringing people together through the power of music."
-        eyebrow="about Kaleidoscope"
-        button1Text="Find your group"
-        button1Link="/groups"
-        button2Text="Contact us"
-        button2Link="/contact-us"
+    <>
+      <Helmet
+        title="About Us | Music Groups in Kent"
+        description="We are a community music organisation based in Rochester, Kent. We run a range of music groups for adults with all abilities, bringing people together through the power of music."
+        keywords="learn music, music, Kent, music groups, Rochester Kent, Kaleidoscope music groups"
+        link="https://www.kaleidoscopemusic.org.uk/about-us"
+        schemaMarkup={{
+          "@context": "https://schema.org",
+          "@type": "MusicGroup",
+          name: "Kaleidoscope Music",
+          description:
+            "Kaleidoscope is a community music organisation based in Rochester, Kent. We run a range of music groups for adults with all abilities, bringing people together through the power of music.",
+          url: "https://www.kaleidoscopemusic.org.uk/about-us",
+          sameAs: [
+            "https://www.facebook.com/KaleidoscopeCreativeArts/",
+            "https://www.instagram.com/hdproductionsltd/",
+          ],
+          image: [
+            "https://www.kaleidoscopemusic.org.uk/assets/images/home.jpg",
+          ],
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "Kent",
+            addressRegion: "South East England",
+            addressCountry: "United Kingdom",
+          },
+          telephone: "+44 1795 522 738",
+          email: "brian@quercusgraphics.co.uk",
+        }}
       />
-      <FadeInSection>
-        <section className="about-page__intro">
-          <div className="about-page__intro-container">
-            <div className="about-page__intro-image">
-              <img src={scope} alt="" aria-hidden="true" />
-            </div>
-            <div className="header">
-              <div className="eyebrow">our story</div>
-              <h2>
-                From A Simple Idea to a
-                <span style={{ color: "var(--teal)" }}>Thriving Community</span>
-              </h2>
-              <p>
-                Kaleidoscope was set up by our founder, Patricia Norton, over 35
-                years ago. Following Pat's retirement in 2025 Kaleidoscope
-                Music, has been run by a small committee elected by its members.
-              </p>
-              <p>
-                We have a concert at the end of each term when friends and
-                family are invited along to hear what we have been rehearsing.
-                We also play at outside events in support of the local
-                community, but there is no pressure to play at any of our
-                concerts if you prefer not to.
-              </p>
-            </div>
-
-            <div className="about-page__socials">
-              <Link
-                to="https://www.facebook.com/KaleidoscopeCreativeArts/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <div className="about-page__socials-icon">
-                  <FontAwesomeIcon icon={faFacebook} />
-                </div>
-
-                <div className="about-page__socials-content">
-                  <p>Follow us on Facebook</p>
-                  <p>For the latest news and updates.</p>
-                </div>
-              </Link>
-            </div>
-
-            <div className="about-page__intro-features">
-              {features.map((feature) => (
-                <FeatureCard key={feature.id} {...feature} />
-              ))}
-            </div>
-          </div>
-        </section>
-      </FadeInSection>
-      <FadeInSection>
-        <TextImage
-          eyebrow="our people"
-          h2="More than"
-          headingAccent="Just Music"
-          color="var(--pink)"
-          p1="Kaleidoscope music groups brings musicians together to play, learn, improve and enjoy music as part of a community."
-          buttonLink="/groups"
-          buttonText="Find Your group"
-          buttonColor="var(--pink)"
-          src={people}
+      <div className="about-page">
+        <SmallHero
+          src={about}
+          h1="About Us."
+          h1a="More"
+          h1b="Than"
+          h1c="Music."
+          p="We are a community music organisation based in Rochester, Kent. We run a range of music groups for adults with all abilities, bringing people together through the power of music."
+          eyebrow="about Kaleidoscope"
+          button1Text="Find your group"
+          button1Link="/groups"
+          button2Text="Contact us"
+          button2Link="/contact-us"
         />
-      </FadeInSection>
-      <FadeInSection>
-        <Testimonials />
-      </FadeInSection>
-    </div>
+        <FadeInSection>
+          <section className="about-page__intro">
+            <div className="about-page__intro-container">
+              <div className="about-page__intro-image">
+                <img src={scope} alt="" aria-hidden="true" />
+              </div>
+              <div className="header">
+                <div className="eyebrow">our story</div>
+                <h2>
+                  From A Simple Idea to a
+                  <span style={{ color: "var(--teal)" }}>
+                    Thriving Community
+                  </span>
+                </h2>
+                <p>
+                  Kaleidoscope was set up by our founder, Patricia Norton, over
+                  35 years ago. Following Pat's retirement in 2025 Kaleidoscope
+                  Music, has been run by a small committee elected by its
+                  members.
+                </p>
+                <p>
+                  We have a concert at the end of each term when friends and
+                  family are invited along to hear what we have been rehearsing.
+                  We also play at outside events in support of the local
+                  community, but there is no pressure to play at any of our
+                  concerts if you prefer not to.
+                </p>
+              </div>
+
+              <div className="about-page__socials">
+                <Link
+                  to="https://www.facebook.com/KaleidoscopeCreativeArts/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div className="about-page__socials-icon">
+                    <FontAwesomeIcon icon={faFacebook} />
+                  </div>
+
+                  <div className="about-page__socials-content">
+                    <p>Follow us on Facebook</p>
+                    <p>For the latest news and updates.</p>
+                  </div>
+                </Link>
+              </div>
+
+              <div className="about-page__intro-features">
+                {features.map((feature) => (
+                  <FeatureCard key={feature.id} {...feature} />
+                ))}
+              </div>
+            </div>
+          </section>
+        </FadeInSection>
+        <FadeInSection>
+          <TextImage
+            eyebrow="our people"
+            h2="More than"
+            headingAccent="Just Music"
+            color="var(--pink)"
+            p1="Kaleidoscope music groups brings musicians together to play, learn, improve and enjoy music as part of a community."
+            buttonLink="/groups"
+            buttonText="Find Your group"
+            buttonColor="var(--pink)"
+            src={people}
+          />
+        </FadeInSection>
+        <FadeInSection>
+          <Testimonials />
+        </FadeInSection>
+      </div>
+    </>
   );
 };
 

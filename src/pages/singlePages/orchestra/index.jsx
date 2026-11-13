@@ -5,6 +5,9 @@ import julie from "../../../assets/images/julie.JPEG";
 const Orchestra = () => {
   return (
     <GroupSingle
+      title="Community Orchestra | Kaleidoscope Music Groups"
+      description="The orchestra and string ensemble are conducted by Julie Moore, who has been with us for 18 years."
+      url="https://www.kaleidoscopemusic.org.uk/community-orchestra"
       src={hero}
       HeroEyebrow="The Orchestra"
       HeroH1="Kaleidoscope"
