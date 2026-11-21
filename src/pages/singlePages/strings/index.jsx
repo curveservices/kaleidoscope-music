@@ -1,9 +1,11 @@
 import GroupSingle from "../../../components/groupSingle";
 import hero from "../../../assets/images/strings.webp";
 import julie from "../../../assets/images/julie.JPEG";
+import strings from "../../../assets/audio/strings.mp3";
 const Strings = () => {
   return (
     <GroupSingle
+      page="strings"
       title="String Ensemble | Kaleidoscope Music Groups"
       description="The string ensemble is conducted by Julie Moore, who has been with us for 18 years."
       url="https://www.kaleidoscopemusic.org.uk/string-ensemble"
@@ -52,6 +54,8 @@ const Strings = () => {
         standard ready for performances in the community. Pieces range from: Suites by Bach,,
         Palladio (Jenkins), Ave Verum (Mozart), The Sound of Music medley (Rogers). Braveheart
         (Horner)."
+      audioImg={hero}
+      audio={strings}
     />
   );
 };

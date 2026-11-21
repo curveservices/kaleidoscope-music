@@ -1,10 +1,12 @@
 import GroupSingle from "../../../components/groupSingle";
 import hero from "../../../assets/images/home.jpg";
 import julie from "../../../assets/images/julie.JPEG";
+import orchestra from "../../../assets/audio/orchestra.mp3";
 
 const Orchestra = () => {
   return (
     <GroupSingle
+      page="orchestra"
       title="Community Orchestra | Kaleidoscope Music Groups"
       description="The orchestra and string ensemble are conducted by Julie Moore, who has been with us for 18 years."
       url="https://www.kaleidoscopemusic.org.uk/community-orchestra"
@@ -58,6 +60,8 @@ const Orchestra = () => {
         Recently we have taken part in Community events; raising money for various charities through
         concerts in Church and we have played in festivals. Everyone works hard to produce excellent
         performances."
+      audioImg={hero}
+      audio={orchestra}
     />
   );
 };

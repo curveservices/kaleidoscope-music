@@ -33,6 +33,8 @@ const GroupSingle = (props) => {
       display: "none",
     },
   ];
+  const strings = props.page === 'strings';
+  const orchestra = props.page === 'orchestra'
     return (
       <>
         <Helmet
@@ -64,7 +66,7 @@ const GroupSingle = (props) => {
             email: "brian@quercusgraphics.co.uk",
           }}
         />
-        <div className="group-page">
+        <div className="groups-page">
           <HomeHero
             src={props.src}
             eyebrow={props.HeroEyebrow}
@@ -114,6 +116,35 @@ const GroupSingle = (props) => {
                   {features.map((feature) => (
                     <FeatureCard key={feature.id} {...feature} />
                   ))}
+                  {(strings || orchestra) && (
+                    <div className="audio">
+                       <div className="header">
+                      <div className="eyebrow">
+                        Sounds from the {props.page}
+                      </div>
+                      <h2>
+                        Listen to the
+                        <span style={{ color: "var(--yellow)" }}>
+                          {props.page} group
+                        </span>
+                      </h2>
+                    </div>
+                      <div className="audio__card">
+                        <img
+                          className="audio__image"
+                          src={props.audioImg}
+                          alt="Listen to a sample of our music"
+                        />
+
+                        <div className="audio__player">
+                          <audio controls preload="none">
+                            <source src={props.audio} type="audio/mpeg" />
+                            Your browser does not support audio playback.
+                          </audio>
+                        </div>
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
             </section>
