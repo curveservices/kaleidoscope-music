@@ -120,12 +120,12 @@ const GroupSingle = (props) => {
                   <div className="audio">
                     <div className="header">
                       <div className="eyebrow">
-                        Sounds from the {props.page}
+                        Group Sounds
                       </div>
                       <h2>
-                        Listen to the
-                        <span style={{ color: "var(--yellow)" }}>
-                          {props.page} group
+                        Hear the
+                        <span style={{ color: "var(--teal)" }}>
+                          {props.page}
                         </span>
                       </h2>
                     </div>
