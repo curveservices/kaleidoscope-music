@@ -10,7 +10,7 @@
 
     &__container-cards {
       display: grid;
-      grid-template-columns: repeat(2,1fr);
+      grid-template-columns: repeat(2, 1fr);
       grid-area: 2 / 1 / span 2;
       place-items: end;
       gap: 2rem;
@@ -38,7 +38,6 @@
         overflow: hidden;
         border-radius: 8px;
         background: var(--navy);
-        
       }
 
       &__image {
@@ -57,10 +56,12 @@
         left: 0;
         width: 100%;
         padding: 35px 20px 18px;
-        background: linear-gradient(to top,
-            rgba(95, 34, 66, 0.95),
-            rgba(24, 44, 66, 0.65),
-            transparent);
+        background: linear-gradient(
+          to top,
+          rgba(95, 34, 66, 0.95),
+          rgba(24, 44, 66, 0.65),
+          transparent
+        );
         audio {
           display: block;
           width: 100%;
@@ -188,7 +189,7 @@
         padding: 0px 24px 48px;
       }
       &__container-cards {
-        grid-template-columns: repeat(1,1fr);
+        grid-template-columns: repeat(1, 1fr);
         place-items: center;
         gap: 2rem;
         margin-top: 1rem;

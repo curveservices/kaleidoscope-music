@@ -33,92 +33,92 @@ const GroupSingle = (props) => {
       display: "none",
     },
   ];
-  const strings = props.page === 'strings';
-  const orchestra = props.page === 'orchestra'
-    return (
-      <>
-        <Helmet
-          title={props.title}
-          description={props.description}
-          keywords="learn music, play music, Kent, music groups, Rochester Kent, Kaleidoscope music groups"
-          link={props.url}
-          schemaMarkup={{
-            "@context": "https://schema.org",
-            "@type": "MusicGroup",
-            name: "Kaleidoscope Music",
-            description:
-              "Kaleidoscope is a friendly community of musicians in Rochester, Kent - from returning players to inexperienced and experienced musicians.",
-            url: `${props.url}`,
-            sameAs: [
-              "https://www.facebook.com/KaleidoscopeCreativeArts/",
-              "https://www.instagram.com/hdproductionsltd/",
-            ],
-            image: [
-              "https://www.kaleidoscopemusic.org.uk/assets/images/home.jpg",
-            ],
-            address: {
-              "@type": "PostalAddress",
-              addressLocality: "Kent",
-              addressRegion: "South East England",
-              addressCountry: "United Kingdom",
-            },
-            telephone: "+44 1795 522 738",
-            email: "brian@quercusgraphics.co.uk",
-          }}
+  const strings = props.page === "strings";
+  const orchestra = props.page === "orchestra";
+  return (
+    <>
+      <Helmet
+        title={props.title}
+        description={props.description}
+        keywords="learn music, play music, Kent, music groups, Rochester Kent, Kaleidoscope music groups"
+        link={props.url}
+        schemaMarkup={{
+          "@context": "https://schema.org",
+          "@type": "MusicGroup",
+          name: "Kaleidoscope Music",
+          description:
+            "Kaleidoscope is a friendly community of musicians in Rochester, Kent - from returning players to inexperienced and experienced musicians.",
+          url: `${props.url}`,
+          sameAs: [
+            "https://www.facebook.com/KaleidoscopeCreativeArts/",
+            "https://www.instagram.com/hdproductionsltd/",
+          ],
+          image: [
+            "https://www.kaleidoscopemusic.org.uk/assets/images/home.jpg",
+          ],
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "Kent",
+            addressRegion: "South East England",
+            addressCountry: "United Kingdom",
+          },
+          telephone: "+44 1795 522 738",
+          email: "brian@quercusgraphics.co.uk",
+        }}
+      />
+      <div className="groups-page">
+        <HomeHero
+          src={props.src}
+          eyebrow={props.HeroEyebrow}
+          h1a={props.HeroH1a}
+          h1b={props.HeroH1b}
+          h1c={props.HeroH1c}
+          h1={props.HeroH1}
+          p={props.HeroP}
+          p1={props.HeroP1}
+          button1Link={props.HeroButton1Link}
+          button1Text={props.HeroButton1Text}
+          button2Link={props.HeroButton2Link}
+          button2Text={props.HeroButton2Text}
         />
-        <div className="groups-page">
-          <HomeHero
-            src={props.src}
-            eyebrow={props.HeroEyebrow}
-            h1a={props.HeroH1a}
-            h1b={props.HeroH1b}
-            h1c={props.HeroH1c}
-            h1={props.HeroH1}
-            p={props.HeroP}
-            p1={props.HeroP1}
-            button1Link={props.HeroButton1Link}
-            button1Text={props.HeroButton1Text}
-            button2Link={props.HeroButton2Link}
-            button2Text={props.HeroButton2Text}
-          />
-          <FadeInSection>
-            <div className="group-page__content">
-              <TextImage
-                src={props.ContentImage}
-                eyebrow={props.ContentEyebrow}
-                h2={props.ContentH2}
-                headingAccent={props.ContentHeadingAccent}
-                color="var(--yellow)"
-                p1={props.ContentP}
-                p2={props.ContentP1}
-                buttonText="Join Us"
-                buttonLink="/join-us"
-                buttonColor="var(--pink)"
-              />
-            </div>
-          </FadeInSection>
-          <FadeInSection>
-            <section className="group-page__more-info">
-              <div className="group-page__more-info__container">
-                <div className="header">
-                  <div className="eyebrow">{props.MoreInfoEyebrow}</div>
-                  <h2>Rehersals</h2>
-                  <p>{props.MoreInfoP}</p>
-                  <p>{props.MoreInfoP1}</p>
-                  <p>{props.MoreInfoP2}</p>
-                  <Button
-                    text="Back to Groups"
-                    link="/groups"
-                    background="var(--pink)"
-                  />
-                </div>
-                <div className="group-page__more-info__container-cards">
-                  {features.map((feature) => (
-                    <FeatureCard key={feature.id} {...feature} />
-                  ))}
-                  {(strings || orchestra) && (
-                    <div className="audio">
-                       <div className="header">
+        <FadeInSection>
+          <div className="group-page__content">
+            <TextImage
+              src={props.ContentImage}
+              eyebrow={props.ContentEyebrow}
+              h2={props.ContentH2}
+              headingAccent={props.ContentHeadingAccent}
+              color="var(--yellow)"
+              p1={props.ContentP}
+              p2={props.ContentP1}
+              buttonText="Join Us"
+              buttonLink="/join-us"
+              buttonColor="var(--pink)"
+            />
+          </div>
+        </FadeInSection>
+        <FadeInSection>
+          <section className="group-page__more-info">
+            <div className="group-page__more-info__container">
+              <div className="header">
+                <div className="eyebrow">{props.MoreInfoEyebrow}</div>
+                <h2>Rehersals</h2>
+                <p>{props.MoreInfoP}</p>
+                <p>{props.MoreInfoP1}</p>
+                <p>{props.MoreInfoP2}</p>
+                <Button
+                  text="Back to Groups"
+                  link="/groups"
+                  background="var(--pink)"
+                />
+              </div>
+              <div className="group-page__more-info__container-cards">
+                {features.map((feature) => (
+                  <FeatureCard key={feature.id} {...feature} />
+                ))}
+                {(strings || orchestra) && (
+                  <div className="audio">
+                    <div className="header">
                       <div className="eyebrow">
                         Sounds from the {props.page}
                       </div>
@@ -129,32 +129,32 @@ const GroupSingle = (props) => {
                         </span>
                       </h2>
                     </div>
-                      <div className="audio__card">
-                        <img
-                          className="audio__image"
-                          src={props.audioImg}
-                          alt="Listen to a sample of our music"
-                        />
+                    <div className="audio__card">
+                      <img
+                        className="audio__image"
+                        src={props.audioImg}
+                        alt="Listen to a sample of our music"
+                      />
 
-                        <div className="audio__player">
-                          <audio controls preload="none">
-                            <source src={props.audio} type="audio/mpeg" />
-                            Your browser does not support audio playback.
-                          </audio>
-                        </div>
+                      <div className="audio__player">
+                        <audio controls preload="none">
+                          <source src={props.audio} type="audio/mpeg" />
+                          Your browser does not support audio playback.
+                        </audio>
                       </div>
                     </div>
-                  )}
-                </div>
+                  </div>
+                )}
               </div>
-            </section>
-          </FadeInSection>
-          <FadeInSection>
-            <Testimonials />
-          </FadeInSection>
-        </div>
-      </>
-    );
+            </div>
+          </section>
+        </FadeInSection>
+        <FadeInSection>
+          <Testimonials />
+        </FadeInSection>
+      </div>
+    </>
+  );
 };
 
 export default GroupSingle;

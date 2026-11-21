@@ -63,7 +63,7 @@ const Groups = () => {
           <GroupsGrid groups={groups} />
         </FadeInSection>
         <FadeInSection>
-          <EventsPreview/>
+          <EventsPreview />
         </FadeInSection>
         <FadeInSection>
           <Testimonials />
