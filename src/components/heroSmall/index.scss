@@ -119,6 +119,7 @@
       rgba(14, 26, 43, 0.28) 70%,
       rgba(14, 26, 43, 0.08) 100%
     );
+    pointer-events: none;
   }
   &__content {
     margin-top: 4rem;
@@ -248,7 +249,11 @@
 
 @media screen and (max-width: 768px) {
   .small-hero {
-    height: 100dvh;
+     min-height: 100svh;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    
     // =============================
     // IMAGE
     // =============================
@@ -305,6 +310,7 @@
     }
 
     &__image-overlay {
+
       background: linear-gradient(
         55deg,
         rgba(14, 26, 43, 1) 0%,
@@ -316,7 +322,7 @@
 
     &__content {
       margin-top: 3rem;
-      padding: 70px 24px;
+      padding: 70px 24px 340px;
     }
 
     // ==============================
