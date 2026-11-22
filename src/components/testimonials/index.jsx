@@ -134,8 +134,8 @@ export default function Testimonials() {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
-          arrows: false,
+          slidesToShow: 1,
+          arrows: true,
         },
       },
       {

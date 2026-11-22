@@ -137,21 +137,27 @@
     &__image {
       height: 400px;
     }
-    .header {
+    &__header {
       padding: 0 1.5rem;
-      margin: 0 !important;
+      margin: 0;
+      gap: 1rem;
     }
     &__content {
       padding: 0 1rem;
     }
     &__cards-container {
-      padding: 0 0.5rem;
+      flex-direction: column;
+      padding: 0rem;
+      gap: 2rem;
     }
-    &__cards {
+    &__card {
       grid-template-columns: 1fr;
+      min-height: 180px;
+
     }
     &__btn-container {
       align-self: center;
+      margin-top: 2rem;
     }
   }
 }
