@@ -1,5 +1,4 @@
 import GroupCard from "../groupCard";
-import scope from "../../assets/images/small-kaleidoscope.png";
 
 import "./index.scss";
 
@@ -12,9 +11,6 @@ const GroupsGrid = ({
 }) => {
   return (
     <section className="groups-grid" id="groups">
-      <div className="groups-grid__image">
-        <img src={scope} alt="" aria-hidden="true" />
-      </div>
       <div className="groups-grid__header">
         <div className="header">
           <span className="eyebrow">{eyebrow}</span>
