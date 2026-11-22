@@ -59,9 +59,7 @@ const Groups = () => {
           button2Text="Live events"
           src={sax1}
         />
-        <FadeInSection>
           <GroupsGrid groups={groups} />
-        </FadeInSection>
         <FadeInSection>
           <EventsPreview />
         </FadeInSection>
