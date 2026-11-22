@@ -134,12 +134,10 @@ const Home = () => {
             features={introFeatures}
           />
         </FadeInSection>
-        <FadeInSection>
           <GroupsGrid
             p1="From full orchestras and string ensembles to smaller groups, there's plenty of ways to make music together."
             groups={groups}
           />
-        </FadeInSection>
         <FadeInSection>
           <TargetCustomer
             eyebrow="all abilities welcome"
