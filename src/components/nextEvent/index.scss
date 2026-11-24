@@ -1,0 +1,290 @@
+.next-event {
+    position: fixed;
+    right: 118px;
+    bottom: 24px;
+    z-index: 900;
+    width: 300px;
+    font-family: var(--font-body);
+    animation: fadeInUp 0.3s 0.5s backwards;
+
+    // ----------------------------------------
+    // COLLAPSED MINI CARD
+    // ----------------------------------------
+
+    &__mini {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        width: 100%;
+        padding: 14px;
+        border: none;
+        border-left: 4px solid var(--event-colour);
+        border-radius: 12px;
+        background: var(--ivory);
+        color: var(--navy);
+        text-align: left;
+        cursor: pointer;
+        box-shadow: var(--button);
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+        &:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--button-hover);
+        }
+    }
+
+    &__mini-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        width: 42px;
+        height: 42px;
+        border-radius: 10px;
+        background: var(--event-colour);
+        color: white;
+        font-size: 18px;
+    }
+
+    &__mini-content {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        min-width: 0;
+        gap: 2px;
+    }
+
+    &__eyebrow {
+        color: var(--event-colour);
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+    &__mini-title {
+        overflow: hidden;
+        color: var(--navy);
+        font-family: var(--font-heading);
+        font-size: 15px;
+        font-weight: 700;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    &__mini-date {
+        color: #65717c;
+        font-size: 12px;
+    }
+
+    &__mini-arrow {
+        color: var(--navy);
+        font-size: 13px;
+    }
+
+    // ----------------------------------------
+    // EXPANDED PANEL
+    // ----------------------------------------
+
+    &__panel {
+        overflow: hidden;
+        border-radius: 8px;
+        background: var(--ivory);
+        box-shadow: 0 10px 40px rgba(24, 44, 66, 0.25);
+        max-height: 600px;
+        width: 400px;
+        animation: nextEventIn 0.25s ease both;
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px 18px;
+        background: var(--navy);
+        color: white;
+    }
+
+    &__header-label {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+
+        svg {
+            color: var(--yellow);
+        }
+    }
+
+    &__close {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+        border: none;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.12);
+        color: white;
+        cursor: pointer;
+        transition: background 0.2s ease;
+
+        &:hover {
+            background: rgba(255, 255, 255, 0.25);
+        }
+    }
+
+    &__body {
+        padding: 20px;
+    }
+
+    &__type {
+        display: inline-block;
+        margin-bottom: 8px;
+        padding: 5px 10px;
+        border-radius: 4px;
+        background: var(--event-colour);
+        color: white;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+    h3 {
+        margin: 0 0 7px;
+        color: var(--navy);
+        font-family: var(--font-heading);
+        font-size: 23px;
+        line-height: 1.2;
+    }
+
+    &__date {
+        margin: 0 0 16px;
+        color: var(--event-colour);
+        font-size: 13px;
+        font-weight: 700;
+    }
+
+    &__details {
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
+        margin-bottom: 16px;
+        padding: 13px 0;
+        border-top: 1px solid rgba(24, 44, 66, 0.12);
+        border-bottom: 1px solid rgba(24, 44, 66, 0.12);
+
+        p {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin: 0;
+            color: var(--navy);
+            font-size: 13px;
+            line-height: 1.5;
+
+            svg {
+                width: 15px;
+                margin-top: 3px;
+                color: var(--event-colour);
+            }
+        }
+    }
+
+    &__description {
+        margin: 0 0 18px;
+        color: #586675;
+        font-size: 13px;
+        line-height: 1.65;
+    }
+
+    &__link {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        color: var(--navy);
+        font-size: 13px;
+        font-weight: 700;
+        text-decoration: none;
+        transition: color 0.2s ease;
+
+        svg {
+            color: var(--event-colour);
+            transition: transform 0.2s ease;
+        }
+
+        &:hover {
+            color: var(--event-colour);
+
+            svg {
+                transform: translateX(4px);
+            }
+        }
+    }
+
+    &__collapse {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        width: 100%;
+        padding: 11px;
+        border: none;
+        border-top: 1px solid rgba(24, 44, 66, 0.1);
+        background: transparent;
+        color: #65717c;
+        font-family: var(--font-body);
+        font-size: 11px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: color 0.2s ease;
+
+        &:hover {
+            color: var(--event-colour);
+        }
+    }
+}
+
+// ----------------------------------------
+// ANIMATION
+// ----------------------------------------
+
+@keyframes nextEventIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// ----------------------------------------
+// MOBILE
+// ----------------------------------------
+
+@media (max-width: 600px) {
+    .next-event {
+        right: 14px;
+        bottom: 14px;
+        width: min(340px, calc(100vw - 28px));
+
+        &__mini {
+            padding: 11px 12px;
+        }
+
+        &__body {
+            padding: 17px;
+        }
+
+        h3 {
+            font-size: 21px;
+        }
+    }
+}

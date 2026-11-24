@@ -4,73 +4,214 @@ header {
   justify-content: space-around;
   align-items: center;
   position: fixed;
-  padding: 10px 0;
-  width: 100%;
   top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 0;
   z-index: 1000;
   font-family: var(--font-body);
-  font-optical-sizing: auto;
   background: transparent;
-  transition: all 2s ease;
-  cursor: pointer;
+  transition:
+    background 0.3s ease,
+    opacity 0.3s ease,
+    visibility 0.3s ease;
 
   .logo {
     width: auto;
-    padding-left: 0rem;
     height: 100px;
+    padding-left: 0;
   }
 
   .mobile-logo {
     display: none;
   }
 
-  nav {
+  // =====================================
+  // MAIN NAVIGATION
+  // =====================================
+
+  .navbar {
     display: flex;
     align-items: center;
+    gap: 2.5rem;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 800;
     font-size: 18px;
-    gap: 3rem;
-    color: var(--navy);
 
-    .active .menu-container {
-      border-bottom: 2px solid var(--pink);
-      padding-left: 0.25rem;
+    >a {
+      text-decoration: none;
     }
 
     .text {
       color: var(--ivory);
+      transition: color 0.3s ease;
 
       &:hover {
         color: var(--pink);
-        transition: all 0.3s ease-in-out;
       }
     }
+
+    >a.active .text,
+    .nav-dropdown.active>.nav-dropdown__trigger .text {
+      color: var(--pink);
+    }
+
+    .menu-container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+  }
+
+  // =====================================
+  // GROUPS DROPDOWN
+  // =====================================
+
+  .nav-dropdown {
+    position: relative;
+
+    &__trigger {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      >a {
+        text-decoration: none;
+      }
+    }
+
+    &__toggle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 5px;
+      border: none;
+      background: transparent;
+      color: var(--ivory);
+      cursor: pointer;
+      font-size: 12px;
+      transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+
+      &:hover {
+        color: var(--pink);
+      }
+    }
+
+    &__menu {
+      position: absolute;
+      top: 100%;
+      left: -20px;
+      min-width: 335px;
+      display: flex;
+      flex-direction: column;
+      padding: 18px 0 12px;
+      background: var(--navy);
+      border-top: 3px solid var(--pink);
+      border-radius: 0 0 8px 8px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transform: translateY(10px);
+
+      transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease,
+        transform 0.25s ease;
+
+      z-index: 1001;
+    }
+
+    &__link {
+      display: block;
+      padding: 12px 20px;
+      color: var(--ivory);
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 500;
+      text-decoration: none;
+      transition:
+        color 0.2s ease,
+        background 0.2s ease,
+        padding-left 0.2s ease;
+
+      &:hover {
+        color: var(--pink);
+        background: rgba(255, 255, 255, 0.05);
+        padding-left: 25px;
+      }
+
+      &.active {
+        color: var(--pink);
+      }
+
+      &--all {
+        color: var(--teal);
+        font-weight: 700;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        margin-bottom: 5px;
+      }
+    }
+
+    // Desktop hover and keyboard focus
+    &:hover .nav-dropdown__menu,
+    &.dropdown-open .nav-dropdown__menu {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+
+    &.dropdown-open .nav-dropdown__toggle svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  // =====================================
+  // MOBILE ICONS / CONTACT
+  // =====================================
+
+  .mobile-icon {
+    display: none;
+  }
+
+  .contact-container {
+    display: none;
+  }
+
+  .navbar__cta {
+    display: block;
   }
 }
+
+// =====================================
+// SCROLL STATE
+// =====================================
 
 .navbar-scroll {
   opacity: 1;
   visibility: visible;
-  transition:
-    opacity 0.1s ease-in-out,
-    visibility 0.1s ease-in-out;
 }
 
 .navbar-hidden {
   opacity: 0;
   visibility: hidden;
+  pointer-events: none;
 }
 
-.mobile-icon {
-  display: none;
-}
+// =====================================
+// TABLET AND MOBILE NAVIGATION
+// =====================================
 
 @media screen and (max-width: 1032px) {
   header {
     justify-content: space-between;
     padding: 0.5rem 4rem;
-    button {
+
+    .navbar__cta {
       display: none;
     }
 
@@ -80,69 +221,54 @@ header {
 
     .mobile-logo {
       display: block;
-
       width: 75px;
       height: auto;
-
       object-fit: contain;
       padding-top: 5px;
     }
 
-    nav {
+    .navbar {
       display: none;
       position: fixed;
       top: 0;
       right: 0;
       width: 100%;
       height: 100dvh;
-      z-index: 0;
-      overflow: hidden;
-
-      // =====================================
-      // OPEN MENU
-      // =====================================
+      overflow-y: auto;
+      overflow-x: hidden;
+      z-index: -1;
 
       &.mobile-show {
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
-        background: var(--navy);
-        background-image: url(/src//assets/images/kaleidoscope.png);
-        background-size: cover;
-        background-position-x: right;
-        background-blend-mode: multiply;
         align-items: flex-start;
-        z-index: -1;
-        gap: 3rem;
+        justify-content: flex-start;
+        gap: 2rem;
         padding: 8rem 6rem;
+
+        background: var(--navy);
+        background-image: url("/src/assets/images/kaleidoscope.png");
+        background-size: cover;
+        background-position: right;
+        background-blend-mode: multiply;
 
         animation: fadeIn 0.5s backwards;
 
-        // ===================================
-        // MENU CONTENT
-        // ===================================
-
-        .active {
-          border-bottom: none;
-
-          .text {
-            color: var(--pink);
-          }
+        >a {
+          text-decoration: none;
         }
 
         .mobile-icon {
           display: block;
-
           font-size: 25px;
-
           color: var(--pink);
         }
 
         .text {
-          font-size: 18px;
-          text-transform: uppercase;
           color: var(--ivory);
           font-family: var(--font-heading);
+          font-size: 18px;
+          text-transform: uppercase;
           transition: color 0.3s ease;
         }
 
@@ -151,44 +277,129 @@ header {
           align-items: center;
           gap: 28px;
           padding-bottom: 10px;
-          border-bottom: none;
-
           transition: transform 0.3s ease;
 
           &:hover {
             transform: translateX(5px);
 
             .text {
-              color: var(--navy);
+              color: var(--pink);
             }
           }
         }
 
-        // ===================================
-        // CONTACT
-        // ===================================
+        >a.active .text,
+        .nav-dropdown.active .nav-dropdown__trigger .text {
+          color: var(--pink);
+        }
+
+        // =================================
+        // MOBILE GROUPS DROPDOWN
+        // =================================
+
+        .nav-dropdown {
+          width: 100%;
+
+          &__trigger {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 15px;
+          }
+
+          &__toggle {
+            width: 38px;
+            height: 38px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            color: var(--pink);
+            font-size: 13px;
+          }
+
+          &__menu {
+            position: static;
+            min-width: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            margin-top: 10px;
+            padding: 0 0 0 55px;
+
+            background: transparent;
+            border: none;
+            border-radius: 0;
+            box-shadow: none;
+
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            max-height: 0;
+            overflow: hidden;
+            transform: none;
+
+            transition:
+              max-height 0.35s ease,
+              opacity 0.25s ease,
+              visibility 0.25s ease;
+          }
+
+          &.dropdown-open {
+            .nav-dropdown__menu {
+              max-height: 450px;
+              opacity: 1;
+              visibility: visible;
+              pointer-events: auto;
+            }
+
+            .nav-dropdown__toggle svg {
+              transform: rotate(180deg);
+            }
+          }
+
+          &__link {
+            padding: 11px 0;
+            font-size: 14px;
+            letter-spacing: 0.04em;
+
+            &:hover {
+              padding-left: 8px;
+              background: transparent;
+            }
+
+            &--all {
+              color: var(--teal);
+            }
+          }
+        }
+
+        // =================================
+        // MOBILE CONTACT DETAILS
+        // =================================
 
         .contact-container {
           display: flex;
-
           flex-direction: column;
-
-          gap: 20px;
-
+          gap: 18px;
           padding-top: 2rem;
-
           border-top: 1px solid var(--pink);
-
           font-family: var(--font-body);
 
           .text {
             font-size: 16px;
           }
+
           b {
             color: var(--pink);
           }
-          .small {
+
+          a {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--ivory);
             font-size: 14px;
+            text-decoration: none;
           }
         }
       }
@@ -196,50 +407,52 @@ header {
   }
 }
 
+// =====================================
+// SMALL MOBILE
+// =====================================
+
 @media screen and (max-width: 768px) {
   header {
     padding: 1rem 2rem;
     background: transparent;
 
-    .desktop-btn {
-      display: none;
-    }
-
     &.menu-open {
       animation: none;
     }
 
-    nav.mobile-show {
-      height: 100dvh;
-      gap: 2rem;
-      padding: 10rem 2rem;
+    .navbar.mobile-show {
+      gap: 1.5rem;
+      padding: 7rem 2rem 3rem;
 
       .menu-container {
-        gap: 28px;
-
+        gap: 20px;
         padding-bottom: 0;
       }
 
       .mobile-icon {
         width: 28px;
-
-        font-size: 28px;
+        font-size: 24px;
       }
 
       .text {
-        font-size: 19px;
+        font-size: 18px;
+        letter-spacing: 0.12em;
+      }
 
-        letter-spacing: 0.25em;
+      .nav-dropdown {
+        &__link {
+          font-size: 13px;
+          letter-spacing: 0.02em;
+        }
       }
 
       .contact-container {
-        gap: 18px;
-
-        padding-top: 25px;
+        gap: 15px;
+        padding-top: 20px;
 
         .text {
-          font-size: 18px;
           width: 100%;
+          font-size: 16px;
         }
 
         .small {
@@ -252,7 +465,6 @@ header {
   .menu-icon {
     width: 50px;
     height: 50px;
-
     font-size: 22px;
   }
 }

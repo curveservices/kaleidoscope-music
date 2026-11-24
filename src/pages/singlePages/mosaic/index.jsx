@@ -1,5 +1,6 @@
 import hero from "../../../assets/images/mosaic.webp";
 import GroupSingle from "../../../components/groupSingle";
+import conductor from "../../../assets/images/karen.jpg";
 
 const Mosaic = () => {
   return (
@@ -19,7 +20,7 @@ const Mosaic = () => {
       HeroButton2Link="/events"
       HeroButton2Text="View Events"
 
-      ContentImage={null}
+      ContentImage={conductor}
       ContentEyebrow="Meet the Conductor"
       ContentH2="Karen"
       ContentHeadingAccent="Conductor"

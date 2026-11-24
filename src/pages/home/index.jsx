@@ -18,6 +18,7 @@ import {
 import Testimonial from "../../components/testimonials/index.jsx";
 import Helmet from "../../components/helmet";
 import "./index.scss";
+import NextEvent from "../../components/nextEvent/index.jsx";
 
 const Home = () => {
   const FadeInSection = ({ children }) => {
@@ -124,6 +125,7 @@ const Home = () => {
           button2Text="Join Us"
           button2Link="/contact-us/#join-us"
         />
+        <NextEvent />
         <FadeInSection>
           <IntroSection
             eyebrow="MORE THAN MUSIC"

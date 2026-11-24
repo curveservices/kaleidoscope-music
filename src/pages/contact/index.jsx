@@ -99,7 +99,6 @@ const Contact = () => {
                   <FontAwesomeIcon icon={faPhone} />
                   <div className="phone">
                     <h3>Call us</h3>
-                    <h4>For All Wind Groups</h4>
                     <Link
                       className=""
                       to="tel:+44 7702 056378"
@@ -107,16 +106,6 @@ const Contact = () => {
                       rel="noreferrer"
                     >
                       07702 056378
-                    </Link>
-                    <hr />
-                    <h4>For String Ensemble & Orchestra.</h4>
-                    <Link
-                      className=""
-                      to="tel:+44 7910 632679"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      07910 632679
                     </Link>
                   </div>
                 </div>

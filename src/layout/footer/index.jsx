@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo.svg";
 import "./index.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
   return (
@@ -49,14 +49,6 @@ const Footer = () => {
               aria-label="Kaleidoscope music groups Facebook."
             >
               <FontAwesomeIcon icon={faFacebook} />
-            </a>
-            <a
-              href="https://www.instagram.com/hdproductionsltd/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Kaleidoscope music groups Instagram"
-            >
-              <FontAwesomeIcon icon={faInstagram} />
             </a>
           </div>
           <p className="footer__social-text">
