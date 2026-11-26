@@ -9,11 +9,41 @@ import {
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-import Button from "../../components/button";
 import useScrollState from "../../components/scrollState";
 import Helmet from "../../components/helmet";
 import "./index.scss";
-
+import IntroSection from "../../components/intro";
+import FeatureCard from "../../components/featureCards";
+const contactDetails = [
+  {
+    id: 1,
+    number: "01",
+    icon: faEnvelope,
+    title: "Email Us",
+    description: "brian@quercusgraphics.co.uk",
+    color: "var(--pink)",
+    display: "none",
+  },
+  {
+    id: 2,
+    number: "02",
+    icon: faPhone,
+    title: "Call us",
+    description: "07702 056378",
+    color: "var(--teal)",
+    display: "none",
+  },
+  {
+    id: 3,
+    number: "03",
+    icon: faLocationArrow,
+    title: "Find us",
+    description:
+      "The Rochester Grammar School, Maidstone Road, Rochester, Kent, ME1 3BY",
+    color: "var(--yellow)",
+    display: "none",
+  },
+];
 const Contact = () => {
   const FadeInSection = ({ children }) => {
     useScrollState();
@@ -80,9 +110,12 @@ const Contact = () => {
                   <span>Reach Us</span>
                 </h2>
               </div>
+
               <div className="contact__details-container">
                 <div className="contact__detail">
-                  <FontAwesomeIcon icon={faEnvelope} />
+                  <div className="contact__icon">
+                    <FontAwesomeIcon icon={faEnvelope} />
+                  </div>
                   <div className="email">
                     <h3>Email us</h3>
                     <Link
@@ -94,9 +127,16 @@ const Contact = () => {
                       brian@quercusgraphics.co.uk
                     </Link>
                   </div>
+                  <span
+                    className="contact__shape"
+                    style={{ background: "var(--pink)" }}
+                    aria-hidden="true"
+                  />
                 </div>
                 <div className="contact__detail">
-                  <FontAwesomeIcon icon={faPhone} />
+                  <div className="contact__icon">
+                    <FontAwesomeIcon icon={faPhone} />
+                  </div>
                   <div className="phone">
                     <h3>Call us</h3>
                     <Link
@@ -108,9 +148,17 @@ const Contact = () => {
                       07702 056378
                     </Link>
                   </div>
+                  <span
+                    className="contact__shape"
+                    style={{ background: "var(--teal)" }}
+                    aria-hidden="true"
+                  />
                 </div>
                 <div className="contact__detail">
-                  <FontAwesomeIcon icon={faLocationArrow} />
+                  <div className="contact__icon">
+                    <FontAwesomeIcon icon={faLocationArrow} />
+                  </div>
+
                   <div className="address">
                     <h3>Find us</h3>
                     <Link
@@ -123,10 +171,15 @@ const Contact = () => {
                       Kent, ME1 3BY
                     </Link>
                   </div>
+                  <span
+                    className="contact__shape"
+                    style={{ background: "var(--yellow)" }}
+                    aria-hidden="true"
+                  />
                 </div>
               </div>
             </div>
-            <div className="contact__form-section" id="join-us">
+            {/* <div className="contact__form-section" id="join-us">
               <div className="header">
                 <div className="eyebrow">Contact us</div>
                 <h2>
@@ -199,7 +252,7 @@ const Contact = () => {
                   </div>
                 </div>
               </form>
-            </div>
+            </div> */}
           </section>
         </FadeInSection>
         <FadeInSection>

@@ -6,7 +6,7 @@
   flex-direction: row-reverse;
   width: 100%;
   gap: 0.25rem;
-  padding: clamp(4rem, 8vw, 3rem) 1.5rem;
+  padding: var(--desktop-section);
 
   &__container {
     display: flex;
@@ -165,7 +165,7 @@
       display: flex;
       flex-direction: column-reverse;
       gap: 0rem;
-      padding-left: var(--mobile-section);
+      padding: var(--mobile-section);
     }
 
     &__image {
